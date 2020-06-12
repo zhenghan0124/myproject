@@ -1,0 +1,204 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+
+        .section--show {
+            background: #fff;
+        }
+
+            .section--show + .section--show {
+                margin-top: 16px;
+            }
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 7%;
+                padding-right: 5%;
+            }
+        }
+
+        .grid--column-2 {
+            margin-bottom: 10px;
+        }
+
+            .grid--column-2 img {
+                display: block;
+            }
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}')"></div>
+
+                </div>
+            </article>
+        </section>
+
+
+
+        <div class="sbmain md">
+            <section class="section section--show">
+                <article class="article article--page" style="padding-left: 10%; padding-right: 10%;">
+
+                    <h2>{$Think.lang.tiyan} </h2>
+                    <p>
+                        {$data.content}
+                    </p>
+                   
+                </article>
+            </section>
+
+            <section class="section section--show">
+                <volist name='huodong' id='vo' mod='2'>
+                    <eq name='mod' value='1'>
+                        <div class="grid--column-2">
+                    <div class="grid__item">
+                        <article class="article article--page">
+                            <h2>{$vo.title} </h2>
+                            <p>
+                                {$vo.description}
+                            </p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <img src="/Uploads/{$vo.pic}" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div>
+                        
+                    <else />
+                         <div class="grid--column-2">
+                    <div class="grid__item">
+                        <img src="/Uploads/{$vo.pic}" alt="Alternate Text" />
+                    </div>
+                    <div class="grid__item">
+                        <article class="article article--page">
+
+                            <h2>{$vo.title} </h2>
+                            <p>
+                            {$vo.description}
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div>
+                    </eq>
+                </volist>
+                <!-- <div class="grid--column-2">
+                    <div class="grid__item">
+                        <img src="__PUBLIC__/home/img/activity/2.png" alt="Alternate Text" />
+                    </div>
+                    <div class="grid__item">
+                        <article class="article article--page">
+
+                            <h2>舒心瑜伽 </h2>
+                            <p>
+                            
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div>
+
+
+
+                <div class="grid--column-2">
+                    <div class="grid__item">
+                        <article class="article article--page">
+                            <h2>晨间太极 </h2>
+                            <p>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <img src="__PUBLIC__/home/img/activity/3.png" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div>
+
+
+                <div class="grid--column-2">
+                    <div class="grid__item">
+                        <img src="__PUBLIC__/home/img/activity/4.png" alt="Alternate Text" />
+                    </div>
+                    <div class="grid__item">
+                        <article class="article article--page">
+
+                            <h2>动动小手，精彩无限 </h2>
+                            <p>
+                              
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div>
+
+
+
+                <div class="grid--column-2">
+                    <div class="grid__item">
+                        <article class="article article--page">
+                            <h2>快乐采摘 </h2>
+                            <p>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="grid__item">
+                        <img src="__PUBLIC__/home/img/activity/5.png" alt="Alternate Text" />
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 20px; background: #f0f0f0;"></div> -->
+            </section>
+
+
+
+
+        </div>
+
+
+
+    </main>
+
+
+<block name="footer">
+</block>

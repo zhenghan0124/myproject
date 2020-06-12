@@ -1,0 +1,231 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        .icon__label.btn1{
+            margin-left:0;
+        }
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity water" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}');background-size:100% 100%;"></div>
+
+                </div>
+            </article>
+        </section>
+        <style>
+            h2{
+                margin-top:30px!important;
+                margin-bottom:30px!important;
+            }
+        </style>
+        <div class="sbmain">
+            <section class="section section--show">
+                <article class="article article--page" style="background:none;padding-left:160px;padding-right:160px;">
+
+                    <h4>{$Think.lang.qiandao}</h4>
+                    {$data.content}
+                   
+                </article>
+            </section>
+        </div>
+        
+       
+
+        <style>
+            .grid--third-window-height > .grid__wrapper{
+                padding:0;
+            }
+        </style>
+
+        <section class="section grid grid--third-window-height grid--column-3 section--show" style="margin-bottom: 60px;">
+            <div class="grid__wrapper ">
+                <volist name="shuiliao" id="vo">
+                    <article class="block block--link block--vertical--new grid__item">
+                        <div class="block__wrapper">
+
+
+
+                            <div class="block__image" style="background-image: url(/Uploads/{$vo.pic})"></div>
+
+                            <div class="block__container">
+                                <div class="block__info">
+                                    <div class="block__name name">
+                                    </div>
+
+                                </div>
+
+                                <div class="block__content">
+                                    <div class="block__content-container">
+                                        <h2 class="block__title title">{$vo.title}</h2>
+                                        <div class="block__body text">{$vo.description}</div>
+                                    </div>
+                                </div>
+
+                                <div class="block__settings">
+                                    <ul class="icon__list">
+                                        <li class="icon__item block__readmore">
+                                            <a class="icon__link" href="{:U('detail',array('id' => $vo['id']))}">
+                                                
+                                                <span class="icon__label  btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </volist>
+                <!-- <article class="block block--link block--vertical--new grid__item">
+                    <div class="block__wrapper">
+
+
+
+                        <div class="block__image" style="background-image: url(__PUBLIC__/home/img/room/1.jpg)"></div>
+
+                        <div class="block__container">
+                            <div class="block__info">
+                                <div class="block__name name">
+                                </div>
+
+                            </div>
+
+                            <div class="block__content">
+                                <div class="block__content-container">
+                                    <h2 class="block__title title">半日休闲水疗礼遇</h2>
+                                    <div class="block__body text">完美的半日身心焕彩计划融合百年古老美容秘方和健康生活方式，给您无微不至的呵护。</div>
+                                </div>
+                            </div>
+
+                            <div class="block__settings">
+                                <ul class="icon__list">
+                                    <li class="icon__item block__readmore">
+                                        <a class="icon__link" href="spa.html">
+                                            
+                                            <span class="icon__label  btn1">了解更多</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article> -->
+                 
+                <!-- <article class="block block--link block--vertical--new grid__item">
+                    <div class="block__wrapper">
+
+
+
+                        <div class="block__image" style="background-image: url(__PUBLIC__/home/img/room/2.jpg)"></div>
+
+                        <div class="block__container">
+                            <div class="block__info">
+                                <div class="block__name name">
+                                </div>
+
+                            </div>
+
+                            <div class="block__content">
+                                <div class="block__content-container">
+                                    <h2 class="block__title title">泰式按摩</h2>
+                                    <div class="block__body text">完美的半日身心焕彩计划融合百年古老美容秘方和健康生活方式，给您无微不至的呵护。</div>
+                                </div>
+                            </div>
+
+                            <div class="block__settings">
+                                <ul class="icon__list">
+                                    <li class="icon__item block__readmore">
+                                        <a class="icon__link" href="spa.html">
+
+                                            <span class="icon__label  btn1">了解更多</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="block block--link block--vertical--new grid__item">
+                    <div class="block__wrapper">
+
+
+
+                        <div class="block__image" style="background-image: url(__PUBLIC__/home/img/room/3.jpg)"></div>
+
+                        <div class="block__container">
+                            <div class="block__info">
+                                <div class="block__name name">
+                                </div>
+
+                            </div>
+
+                            <div class="block__content">
+                                <div class="block__content-container">
+                                    <h2 class="block__title title">爪洼按摩</h2>
+                                    <div class="block__body text">完美的半日身心焕彩计划融合百年古老美容秘方和健康生活方式，给您无微不至的呵护。</div>
+                                </div>
+                            </div>
+
+                            <div class="block__settings">
+                                <ul class="icon__list">
+                                    <li class="icon__item block__readmore">
+                                               <a class="icon__link" href="spa.html">
+
+                                            <span class="icon__label  btn1">了解更多</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+
+    </main>
+
+
+
+<block name="footer">
+</block>
+
+

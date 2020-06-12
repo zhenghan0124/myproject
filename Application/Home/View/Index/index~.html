@@ -1,0 +1,468 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+    <script src="__PUBLIC__/home/js/laydate/laydate.js"></script>
+    <!--Start preloader-->
+    <style>
+        .preloader { position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 99999 }
+
+        .preloader.fade-out { transition: opacity 1s; opacity: 0 }
+
+        .preloader__logo { position: absolute; top: 50%; left: 50%; -webkit-transform: translate3d(-50%,-50%,0); transform: translate3d(-50%,-50%,0); height: auto }
+
+        .preloader__logo:after { content: ''; position: absolute; top: -20px; bottom: -20px; right: 0; width: 200%; transition: -webkit-transform 1s ease-out; transition: transform 1s ease-out; transition: transform 1s ease-out,-webkit-transform 1s ease-out; background: linear-gradient(90deg,hsla(0,0%,100%,0) 0,#fff 40%) }
+
+        .preloader__logo.animate:after { -webkit-transform: translate3d(100%,0,0); transform: translate3d(100%,0,0) }
+
+        .preloader__logo.animate2:after { left: -400%; -webkit-transform: translate3d(200%,0,0); transform: translate3d(200%,0,0); background: linear-gradient(90deg,#fff 60%,hsla(0,0%,100%,0)) }
+    </style>
+
+
+    <!--End preloader-->
+
+
+    <style type="text/css">
+        .video-container { position: relative; padding-bottom: 32.5%; padding-top: 35px; height: 0; overflow: hidden; }
+
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .local-experience__title { font-weight: 400; }
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    
+
+    <eq name="aa" value="1">
+    <else/>
+	    <style>
+        .startvideoWrap { position: absolute; height: 100%; width: 100%; z-index: 101; background: #fffff2; }
+
+        .startvideoWrap .top { background: #fffff2; position: absolute; width: 100%; height: 5vh; z-index: 1; }
+
+        .startvideoWrap .textWrap { position: absolute; top: 50%; left: 50%; height: auto; transform: translateX(-50%) translateY(-50%); z-index: 3; color: #000; font-size: 39px; font-weight: bold; background-repeat: no-repeat;     width: 170px;
+    height: 119px;}
+
+        .startvideoWrap .textWrap .text { height: 100%; width: 0; }
+
+        .loading { overflow: hidden; }
+    </style>
+    <div class="startvideoWrap">
+        <div class="top">
+        </div>
+        <div class="textWrap">
+            <div class="text" style="background: url(__PUBLIC__/home/img/logo.jpg);">
+            </div>
+        </div>
+        
+
+        <video class="block__video js-autoplay  video" loop="" name="media" id="startvideo" style="background: #fffff2;">
+            <source src="https://static.yhbox.cn/audios/al02.mp4" type="video/webm" style="background: #830000;">
+        </video>
+
+        <script>
+            $(function () {
+                $('html').addClass('loading');
+
+                var video = document.getElementById('startvideo');
+                video.muted = true;
+
+                video.play();
+
+                setTimeout(function () {
+                    $('.startvideoWrap .textWrap .text').animate({width:"100%"},1000);
+
+
+                    setTimeout(function () {
+                        $('.startvideoWrap').fadeOut();
+                        $('html').removeClass('loading');
+                    }, 2 * 1000);
+
+                }, 12 * 1000);
+
+            })
+        </script>
+    </div>
+    </eq>
+
+
+
+
+
+    <main class="main index" id="main">
+        <div class="frame-border frame-border--top" id="frame-border"></div>
+        <section class="section section--snap section--show" id="top">
+            <article class="block block--feature block--home block--full-window-height usesVH">
+
+
+                <div class="block__wrapper">
+                    <div class="block__video">
+                        <video class="block__video js-autoplay video" loop name="media">
+                            <source src="https://static.yhbox.cn/audios/al01.mp4" type="video/webm">
+                        </video>
+                        <div class="playpause" style="z-index: 9;"></div>
+                        <img src="/Uploads/{$data1}" style="position: absolute; width: 100%; height: 100%; z-index: 1;" id="videobg" />
+                    </div>
+
+
+
+                </div>
+
+            </article>
+        </section>
+
+
+        <style>
+            .sborder { position: relative; width: auto; float: none; margin: 0; padding: 0; padding: 10px 30px; }
+            .sborder select { padding: 10px; }
+            .sborder .title { font-size: 14px; margin-bottom: 6px; }
+
+            input.ca { background-image: url(__PUBLIC__/home/img/ca.jpg); background-repeat: no-repeat; background-position: right; padding: 11px 10px; }
+
+            .sborder td { width: 25%; padding-left: 0; padding-right: 0; padding-bottom: 30px; }
+
+            .sborder input, .sborder select { width: 100%; text-align: left; font-size: 14px; }
+
+            .sborder .box { margin-bottom: 0; margin-right: 0; }
+
+            .sborder table { margin: auto; }
+        </style>
+        <div class="sborder sborder1">
+            <div class="sbmain" style="max-width: 1024px;">
+                <table>
+                    <tbody>
+
+                        <tr>
+
+                            <td style="padding-right: 35px;">
+                                <div class="title">{$Think.lang.start}</div>
+                                <div class="box">
+                                    <input type="text" class="ca" id="start" value="{$start}">
+                                </div>
+
+                            </td>
+                            <td style="padding-right: 35px;">
+                                <div class="title">{$Think.lang.end}</div>
+                                <div class="box">
+                                    <input type="text" class="ca" id="end" value="{$end}">
+                                </div>
+
+                            </td>
+                            <td style="padding-right: 35px;">
+                                <div class="title">{$Think.lang.num}</div>
+                                <div class="box">
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="title title2">&nbsp;</div>
+                                <div class="box">
+                                    <a class="book-button modal-trigger header__book" href="order.html" style="padding: 9px 0rem; width: auto; display: block; margin-left: 10px; padding: 13px; background: #323232;">
+                                        <h4 class="book-button__title">{$Think.lang.order}</h4>
+                                    </a>
+                                </div>
+
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+        <div class="sbmain">
+
+
+
+            <img src="/Uploads/{$about.pic}" style="width: 100%;" />
+            
+            <section class="section section--show">
+                <article class="article article--page text-center">
+
+
+                    <h1>{$Think.lang.juting}</h1>
+                    <p class="desc">
+                        {$about.description}
+                    </p>
+
+
+
+                    <a href="{:U('Room/index')}" class="button button--simple" style="position:relative;left:-3%;">
+                        <div class="icon icon--svg icon--alila_pillow_right_circle button__icon">
+                            <svg>
+                                <use xlink:href="#alila_pillow_right_circle"></use></svg>
+                        </div>
+                        <span class="button__label btn1">{$Think.lang.detail}</span>
+                    </a>
+
+
+
+
+
+
+                </article>
+            </section>
+
+
+
+            
+            <section class="section section--show">
+
+
+
+
+                <div class="local-experiences">
+
+                    <div class="local-experiences__content">
+
+
+
+
+
+                        <div class="local-experiences__section">
+                            <div class="local-experiences__item local-experience local-experience--platinum">
+                                <div class="local-experience__image">
+                                    <span style="background-image: url(/Uploads/{$dinner['pic'][0]}); background-size: 100% 100%;"></span>
+                                </div>
+                                <div class="local-experience__content">
+
+                                    <h3 class="local-experience__title">{$Think.lang.canyin}</h3>
+                                    <h3 class="local-experience__expiry">
+                                        {$dinner.description}
+                                    </h3>
+                                </div>
+                                <div class="local-experience__buttons">
+                                    <ul class="icon__list">
+                                        <li class="icon__item js-discovery-le-details-btn" data-le-id="231448">
+                                            <a class="icon__link" href="{:U('Dinner/index')}" target="_self">
+
+                                                <span class="icon__label btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                            <div class="local-experiences__item local-experience local-experience--platinum">
+                                <div class="local-experience__image">
+                                    <span style="background-image: url(/Uploads/{$water['pic'][0]}); background-size: 100% 100%;"></span>
+                                </div>
+                                <div class="local-experience__content">
+
+                                    <h3 class="local-experience__title">{$Think.lang.shuiliao}</h3>
+                                    <h3 class="local-experience__expiry">
+                                        {$water.description}
+                                    </h3>
+                                </div>
+                                <div class="local-experience__buttons">
+                                    <ul class="icon__list">
+                                        <li class="icon__item js-discovery-le-details-btn" data-le-id="231448">
+                                            <a class="icon__link" href="{:U('Water/index')}" target="_self">
+
+                                                <span class="icon__label btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="local-experiences__item local-experience local-experience--platinum">
+                                <div class="local-experience__image">
+                                    <span style="background-image: url(/Uploads/{$activity['pic'][0]}); background-size: 100% 100%;"></span>
+                                </div>
+                                <div class="local-experience__content">
+
+                                    <h3 class="local-experience__title">{$Think.lang.activity}</h3>
+                                    <h3 class="local-experience__expiry">
+                                        {$activity.description}
+                                    </h3>
+                                </div>
+                                <div class="local-experience__buttons">
+                                    <ul class="icon__list">
+                                        <li class="icon__item js-discovery-le-details-btn" data-le-id="231448">
+                                            <a class="icon__link" href="{:U('Activity/index')}" target="_self">
+
+                                                <span class="icon__label btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </section>
+
+
+
+
+            
+            <section class="section grid grid--full-window-height lan2 usesVH grid--column-2 section--show">
+                <div class="grid__wrapper ">
+                    <article class="block block--link block--vertical--new grid__item">
+                        <div class="block__wrapper">
+
+
+
+                            <div class="block__image" style="background-image: url(/Uploads/{$product['pic'][0]})"></div>
+
+                            <div class="block__container">
+                                <div class="block__info">
+                                </div>
+
+                                <div class="block__content">
+                                    <div class="block__content-container">
+                                        <h2 class="block__title title">{$Think.lang.mudidi}</h2>
+
+                                    </div>
+                                </div>
+
+                                <div class="block__settings">
+                                    <ul class="icon__list">
+                                        <li class="icon__item block__readmore">
+                                            <a class="icon__link" href="{:U('Product/index')}" target="_self">
+
+                                                <span class="icon__label btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="block block--link block--vertical--new grid__item">
+                        <div class="block__wrapper">
+
+
+
+                            <div class="block__image" style="background-image: url(/Uploads/{$honor['pic']})"></div>
+
+                            <div class="block__container">
+                                <div class="block__info">
+                                </div>
+
+                                <div class="block__content">
+                                    <div class="block__content-container">
+                                        <h2 class="block__title title">{$Think.lang.honor}</h2>
+
+                                    </div>
+                                </div>
+
+                                <div class="block__settings">
+                                    <ul class="icon__list">
+                                        <li class="icon__item block__readmore">
+                                            <a class="icon__link" href="{:U('Honor/index')}" target="_self">
+
+                                                <span class="icon__label btn1">{$Think.lang.more}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <div class="frame-border frame-border--bottom" id="frame-border"></div>
+    </main>
+
+
+    <script>
+        $(function () {
+            $('.video').parent().click(function () {
+                console.log("clisk video");
+                if ($(this).children(".video").get(0).paused) {
+                    $(this).children(".video").get(0).play();
+                    $(this).children(".playpause").fadeOut();
+                    $('#videobg').hide();
+                } else {
+                    $(this).children(".video").get(0).pause();
+                    $(this).children(".playpause").fadeIn();
+                    $('#videobg').show();
+                }
+            });
+
+        })
+    </script>
+
+
+    <script>
+        laydate.render({
+            elem: '#start'
+        });
+        laydate.render({
+            elem: '#end'
+        });
+    </script>
+
+
+<block name="footer">
+</block>
+

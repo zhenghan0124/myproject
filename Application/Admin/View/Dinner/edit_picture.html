@@ -1,0 +1,365 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="header_common">
+  <!-- datepicker -->
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/css/datepicker.css">
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="__ACTION__" method="post">
+            <div class="form-group">
+              <label>标题</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title" class="form-control" value="{$data.title}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>标题（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_en" class="form-control" value="{$data.title_en}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-1">
+                    <ul>
+                      <notempty name="data.pic">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic}">
+                          <input type="hidden" name="pic" value="{$data.pic}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>介绍</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <textarea name="description" cols="30" rows="10" class="form-control" placeholder="">{$data.description}</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>介绍（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <textarea name="description_en" cols="30" rows="10" class="form-control" placeholder="">{$data.description_en}</textarea>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label>内容</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <script id="editor" name="content" type="text/plain" style="width:100%;height:500px;">{$data.content}</script>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>内容（EN）</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <script id="editor_en" name="content_en" type="text/plain" style="width:100%;height:500px;">{$data.content_en}</script>
+                </div>
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label>特色</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_one" class="form-control" value="{$data.title_one}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_one_en" class="form-control" value="{$data.title_one_en}">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-2">
+                    <ul>
+                      <notempty name="data.pic1">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic1}">
+                          <input type="hidden" name="pic1" value="{$data.pic1}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic1"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label>营业时间</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_two" class="form-control" value="{$data.title_two}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>营业时间（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_two_en" class="form-control" value="{$data.title_two_en}">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-3">
+                    <ul>
+                      <notempty name="data.pic2">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic2}">
+                          <input type="hidden" name="pic2" value="{$data.pic2}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic2"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label>餐厅类型</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_three" class="form-control" value="{$data.title_three}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>餐厅类型（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_three_en" class="form-control" value="{$data.title_three_en}">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-4">
+                    <ul>
+                      <notempty name="data.pic3">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic3}">
+                          <input type="hidden" name="pic3" value="{$data.pic3}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic3"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label>特色</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_four" class="form-control" value="{$data.title_four}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_four_en" class="form-control" value="{$data.title_four_en}">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-5">
+                    <ul>
+                      <notempty name="data.pic4">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic4}">
+                          <input type="hidden" name="pic4" value="{$data.pic4}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic4"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色美食</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_five" class="form-control" value="{$data.title_five}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色美食（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_five_en" class="form-control" value="{$data.title_five_en}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-6">
+                    <ul>
+                      <notempty name="data.pic5">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic5}">
+                          <input type="hidden" name="pic5" value="{$data.pic5}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic5"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色美食</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_six" class="form-control" value="{$data.title_six}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>特色美食（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_six_en" class="form-control" value="{$data.title_six_en}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload upload-pic qy-upload-7">
+                    <ul>
+                      <notempty name="data.pic6">
+                        <li>
+                          <img src="__ROOT__/Uploads/{$data.pic6}">
+                          <input type="hidden" name="pic6" value="{$data.pic6}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.pic6"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label>日期</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="time" class="form-control form-control-datepicker" value="{$data.time|date='Y-m-d',###}" readonly>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="id"value="{$data.id}">
+            <button type="submit" class="btn primary m-b">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer_common">
+  <!-- qy-upload -->
+  <script src="__PUBLIC__/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+  <script src="__PUBLIC__/admin/scripts/qy-upload.js"></script>
+  <script type="text/javascript">
+    $('.qy-upload-1').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic",0);
+    $('.qy-upload-2').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic1",0);
+    $('.qy-upload-3').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic2",0);
+    $('.qy-upload-4').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic3",0);
+    $('.qy-upload-5').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic4",0);
+    $('.qy-upload-6').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic5",0);
+    $('.qy-upload-7').qy_upload("{:U('Upload/index',['width'=>450,'height'=>300])}","pic6",0);
+  </script>
+
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+  <script>
+    $('.form-control-datepicker').datepicker({
+      language: "zh-CN",
+      format: "yyyy-mm-dd",
+      autoclose: true
+    });
+  </script>
+
+  <script type="text/javascript" charset="utf-8" src="__PUBLIC__/admin/libs/js/ueditor/ueditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="__PUBLIC__/admin/libs/js/ueditor/ueditor.all.min.js"> </script>
+  <script type="text/javascript" charset="utf-8" src="__PUBLIC__/admin/libs/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script>
+    var ue = UE.getEditor('editor');
+    var ue_en = UE.getEditor('editor_en');
+  </script>
+</block>

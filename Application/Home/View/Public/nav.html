@@ -1,0 +1,297 @@
+<div class="foldout" id="foldoutMenu">
+        <div class="foldout__wrapper">
+            <div class="foldout__header">
+                <div class="foldout__logo">
+                    <div class="logo logo--alila">
+                        <a class="logo__link" href="javascript:;">
+                            <div class="logo__image">
+                                <img src="__PUBLIC__/home/img/close.png" alt="" style="position: absolute; right: 21px;">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="foldout__close" id="foldoutClose">
+                    <div class="button button--simple button--close">
+                        <div class="icon icon--svg icon--alila_close_circle">
+                            <svg>
+                                <use xlink:href="#alila_close_circle--dark"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foldout__main">
+
+
+
+
+                <nav class="foldout__navigation foldout__navigation--main">
+                    <a class="foldout__link foldout__link--nav link" href="{:U('About/index')}"><span>{$Think.lang.about}</span></a>
+                    <a class="foldout__link foldout__link--nav link" href="{:U('Anlu/index')}"><span>{$Think.lang.anlu}</span></a>
+                    <a class="foldout__link foldout__link--nav link" href="{:U('Photo/index')}"><span>{$Think.lang.photo}</span></a>
+                    <a class="foldout__link foldout__link--nav link" href="{:U('Contact/index')}"><span>{$Think.lang.contact}</span></a>
+                </nav>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <header id="header" class="pagewhite--back--header   header header--with-message header--page">
+
+        <div class="header__left">
+            <div class="header__logo">
+                <div class="header__toggle">
+
+
+
+                    <span class="header__back header__languages header__languages--mobile hide">
+                        <div class="languages languages--mobile">
+                            <a class="navigation__link languages__button" href="javascript:;">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background: new 0 0 1000 1000;" xml:space="preserve">
+                                    <g id="XMLID_1_">
+                                        <polygon id="XMLID_3_" points="431.158,409.533 430.992,489.524 430.825,569.515 383.08,529.42 335.335,489.325 383.247,449.429" style="fill: #000"></polygon>
+
+                                        <line id="XMLID_6_" style="fill: none; stroke: #000; stroke-width: 15; stroke-miterlimit: 10;" x1="665.318" y1="489.524" x2="404.931" y2="489.524"></line>
+                                    </g>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </span>
+
+
+                    <span class="header__languages header__languages--mobile">
+                        <div class="languages languages--mobile">
+                            <eq name="Think.cookie.think_language" value="en-us">
+                                <a class="navigation__link languages__button" href="?lang=zh-cn">CN</a>
+                            <else/>
+                                <a class="navigation__link languages__button" href="?lang=en-us">EN</a>
+                            </eq>
+                            
+                        </div>
+                    </span>
+                    <div class="header__hamburger">
+                        <div class="hamburger header--property" id="menuToggle">
+                            <div class="hamburger__icon">
+                                <div class="hamburger__open">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="hamburger__close icon__item">
+                                    <div class="icon icon--svg icon--alila_close_simple">
+                                        <svg>
+                                            <use xlink:href="#alila_close_simple"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__image">
+                    <a href="{:U('Index/index')}">
+                        <img src="__PUBLIC__/home/img/logo.jpg" /></a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="header__right">
+
+            <div class="header__aside header__book-button">
+                <!-- <a class="book-button modal-trigger header__book" href="{:U('Order/index')}"> -->
+                    <!-- <h4 class="book-button__title">{$Think.lang.order}</h4> -->
+                <!-- </a> -->
+				
+				   <a class="book-button modal-trigger header__book" href="{:U('Order/index')}">
+                    <h4 class="book-button__title">{$Think.lang.order}</h4>
+                </a>
+				
+            </div>
+            <div class="header__aside header__signin-link" style="display: block;">
+                
+
+                <div class="link" style="margin-top: 1.16rem;">
+
+                    <div class="select">
+                        <span><a href="javascript:;">ENGLISH</a></span>
+                        <div class="drop">
+                            <ul>
+                                <li>
+                                    <a href="?lang=zh-cn">简体中文</a>
+                                </li>
+                                <li>
+                                    <a href="?lang=en-us">ENGLISH</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="header__menu-wrapper">
+                <div class="header__menu">
+                    <div class="header__settings">
+                        <div class="header__links">
+                            <nav class="navigation navigation--links navigation--columns-4">
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Navigation-->
+                    <div class="header__navigation" id="menuSwitch">
+
+                        
+
+                        <nav class="navigation navigation--menu navigation--columns-4 header--property">
+                            <a class="navigation__link link nav-first <eq name='Think.CONTROLLER_NAME' value='Index'>active</eq>" href="{:U('Index/index')}"><span>{$Think.lang.about}</span></a>
+                            <a class="navigation__link link nav-first <eq name='Think.CONTROLLER_NAME' value='About'>active</eq>" href="{:U('About/index')}"><span>{$Think.lang.about}</span></a>
+                            <a class="navigation__link link <eq name='Think.CONTROLLER_NAME' value='Anlu'>active</eq>" href="{:U('Anlu/index')}"><span>{$Think.lang.anlu}</span></a>
+                            <a class="navigation__link link <eq name='Think.CONTROLLER_NAME' value='Photo'>active</eq>" href="{:U('Photo/index')}"><span>{$Think.lang.photo}</span></a>
+                            <a class="navigation__link link <eq name='Think.CONTROLLER_NAME' value='Contact'>active</eq>" href="{:U('Contact/index')}"><span>{$Think.lang.contact}</span></a>
+
+
+
+                        </nav>
+
+                    </div>
+                    <!-- END Navigation-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <header class="headerWidget10 navWidget" id="headerWidget3151">
+        <div class="navigator">
+            <div class="topBar">
+                <div class="navClose" id="navClose3151" style="">
+                </div>
+                <div class="navBurger" id="navBurger3151" style="">
+                </div>
+                <div class="logoWrap">
+                    <a href="javascript:;">
+                        <img src="__PUBLIC__/home/img/logosmall.jpg" alt="hotel logo" class="logo">
+                    </a>
+                </div>
+                <div class="mobileBooking">
+                    {$Think.lang.order}
+                </div>
+            </div>
+
+            <ul class="rightPart" style="">
+
+                <li class="topNavBarDropdown" tabindex="1">
+                    <span>
+                        <i class="iconfont icon-Global"></i>
+                        {:l('lang')}
+                        <i class="iconfont icon-down"></i>
+                    </span>
+                    <ul class="dropdownList" tabindex="1">
+                        <li class="dropdownListItem">
+                            <a href="?lang=zh-cn" target="_self">简体中文
+                            </a>
+                        </li>
+                        <li class="dropdownListItem" target="_self">
+                            <a style="opacity: 0.5;" href="?lang=en-us">English</a>
+                        </li>
+                    </ul>
+
+                    <script>
+                        $(function () {
+                            $('#headerWidget3151 .topNavBarDropdown').hover(function () {
+                                $('.dropdownList').slideDown();
+                            }, function () {
+                                $('.dropdownList').slideUp();
+                            });
+                        })
+                    </script>
+
+                </li>
+            </ul>
+            <div class="bottomBar" style="">
+
+                
+
+                <ul class="navMenu">
+                    <li class="navMenuItem">
+                        <a href="{:U('Index/index')}" <eq name="Think.CONTROLLER_NAME" value="Index">class="active"</eq>>{$Think.lang.home}</a>
+
+                    </li>
+                    <li class="navMenuItem">
+                        <a href="{:U('About/index')}" <eq name="Think.CONTROLLER_NAME" value="About">class="active"</eq>>{$Think.lang.about}</a>
+
+                    </li>
+                    <li class="navMenuItem">
+                        <a href="{:U('Anlu/index')}" <eq name="Think.CONTROLLER_NAME" value="Anlu">class="active"</eq>>{$Think.lang.anlu}</a>
+
+                    </li>
+
+                    <li class="navMenuItem">
+                        <a href="{:U('Photo/index')}" <eq name="Think.CONTROLLER_NAME" value="Photo">class="active"</eq>>{$Think.lang.photo}</a>
+
+                    </li>
+                    <li class="navMenuItem">
+                        <a href="{:U('Contact/index')}" <eq name="Think.CONTROLLER_NAME" value="Contact">class="active"</eq>>{$Think.lang.contact}</a>
+
+                    </li>
+                </ul>
+                <a href="{:U('Order/roomlist')}" class="bookingBtn">
+                    <i class="iconfont icon-rili" style="font-size: 14px;"></i><span>{$Think.lang.order}</span>  
+                </a>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </header>
+
+
+
+    <div class="modal modal--languages" id="languages-modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                <div class="header__image">
+                    <div class="logo logo--alila ">
+                        <a class="logo__link" href="#">
+                            <div class="logo__image">
+                                <svg>
+                                    <use xlink:href="#alila_logo"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#!" class="modal-close modal__close ">
+                    <div class="icon icon--svg icon--alila_close_circle ">
+                        <svg>
+                            <use xlink:href="#alila_close_circle"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="modal__main languages">
+                <div class="languages languages--mobile">
+                    <ul class="languages__list">
+
+                        <li class="languages__item">
+                            <a class="navigation__link languages__link" href="javascript:;">中文</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

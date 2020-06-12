@@ -1,0 +1,88 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+		
+		
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        article h4:after, .article h4:after{
+            display:none;
+        }
+		
+		
+		.article.article--page2 .p1:first-child  span{
+			color:#000;
+			font-weight:400;
+		}
+		
+		.article.article--page2 .p1 span,.article.article--page2 .p2 span{
+			font-family:'proxima-nova', 'Arial', 'sans-serif'!important;
+		}
+		
+		
+		
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}')"></div>
+
+                </div>
+            </article>
+        </section>
+
+        <div class="sbmain md">
+            <section class="section section--show">
+                <article class="article article--page article--page2" style="">
+
+                    {$data.content}
+                </article>
+            </section>
+        </div>
+        
+         
+
+
+
+
+
+    </main>
+
+
+
+<block name="footer">
+</block>

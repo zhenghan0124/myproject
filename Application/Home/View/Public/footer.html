@@ -1,0 +1,138 @@
+
+    <footer class="footer" id="footer">
+        <div class="footer__content">
+
+
+
+
+
+
+            <div class="footer__section footer__section--four">
+
+                <div class="footer__logos footer__logos--follow" style="text-align: left;">
+                    <div class="footer__label">
+                        {$Think.lang.lianxi}
+                    </div>
+                    <ul class="footer__logos-list icon__list">
+                        <li class="footer__logos-item icon__item">
+                            <a class="footer__logos-link icon__link" target="_self" href="javascript:;">
+                                <div class="icon icon--svg icon--alila_twitter">
+                                    <i class="iconfont icon-weixin"></i>
+                                </div>
+                            </a>
+
+                            <div class="imgwrap">
+                                <img src="__PUBLIC__/home/img/weixin.png" class="img" />
+                            </div>
+
+                        </li>
+                        <li class="footer__logos-item icon__item">
+                            <a class="footer__logos-link icon__link" target="_blank" href="https://weibo.com/u/6291963150?nick=千岛湖安麓&is_hot=1">
+                                <div class="icon icon--svg icon--alila_twitter">
+                                    <i class="iconfont icon-weibo"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="footer__logos-item icon__item moreDetailWrap">
+                            <a class="footer__logos-link icon__link" target="_self" href="javascript:;" id="footerPhone">
+                                <div class="icon icon--svg icon--alila_twitter">
+                                    <i class="iconfont icon-brand" style="position: relative; top: -1px;"></i>
+                                </div>
+                            </a>						 
+                        </li>
+                        <li class="footer__logos-item icon__item">
+                            <a class="footer__logos-link icon__link" target="_self" href="javascript:;" id="footerEmail">
+                                <div class="icon icon--svg icon--alila_twitter">
+                                    <i class="iconfont icon-youjian"></i>
+                                </div>
+                            </a>
+                        </li>
+						
+						
+			 
+						
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="icon__item footer__action-top">
+                <a class="icon__link" href="#top">
+                    <span class="icon__label">{$Think.lang.copyright}</span>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="page__sticky-book-mobile mobile">
+        <a class="book-button modal-trigger book-button--block" href="{:U('Order/index')}">
+            <h4 class="book-button__title">{$Think.lang.order1}</h4>
+        </a>
+    </div>
+
+    <script>
+        $(function () {
+            $('.hamburger__open').click(function () {
+                $('#foldoutMenu').addClass('active')
+            })
+
+            $('#foldoutMenu .logo__image').click(function () {
+                $('#foldoutMenu').removeClass('active')
+            })
+			
+			
+			var footerPhone=false;
+			$('#footerPhone').hover(function(){
+				if(!footerPhone){
+					layer.tips('0571-65050888', '#footerPhone', {
+					  tips: [1, '#c18510'],
+					  time: 4000
+					});
+					footerPhone=true;
+				}			
+			
+			},function(){
+				footerPhone=false;
+				layer.closeAll(); 
+			});
+			
+			
+			var footerEmail=false;
+			$('#footerEmail').hover(function(){
+				if(!footerEmail){
+					layer.tips('reservation.qdh@ahnluh.com  ', '#footerEmail', {
+					  tips: [1, '#c18510'],
+					  time: 4001
+					});
+					footerEmail=true;
+				}			
+			
+			},function(){
+				footerEmail=false;
+				layer.closeAll(); 
+			});
+        })
+
+
+        $(window).on("scroll", function () {
+            // 200 < $(window).scrollTop() ? $("#J_block_sidebar").show() : $("#J_block_sidebar").hide()
+
+        })
+
+    </script>
+	
+	<style>
+	[showtime="4001"]{
+	    width: 230px!important;
+	}
+	</style>
+    <link href="__PUBLIC__/home/css/media.css" rel="stylesheet" />
+
+</body>
+
+</html>
+
+
+
+

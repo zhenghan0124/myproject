@@ -1,0 +1,48 @@
+﻿@media (max-width: 768px) {
+    .footer__logos-list.icon__list {
+        text-align: center;
+    }
+
+    .sborder {
+        float: none !important;
+        padding: 10px !important;
+        width: 100%;
+    }
+
+        .sborder table,
+        .sborder tr,
+        .sborder tbody,
+        .sborder th,
+        .sborder td {
+            display: block !important;
+        }
+
+    .sborderWrap {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .gallery-thumbs {
+        display: none;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody {
+        width: 100%;
+    }
+
+    .OrderFramePaged .OrderFramePagedSide {
+        width: 100%;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel {
+        position: static;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomFrame {
+        position: relative;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle {
+ 
+    }
+}

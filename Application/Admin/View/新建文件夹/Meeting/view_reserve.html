@@ -1,0 +1,229 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>展览名称</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.title}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>主办单位</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.sponsor}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>协办单位/支持单位</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.coorganizer}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>参展人数</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.person}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <label>展出内容</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.content}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>第一选择布展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_1_1|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>开展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_1_2|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>撤展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_1_3|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>第二选择布展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_2_1|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>开展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_2_2|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>撤展</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.expo_2_3|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>举办相同展览过往记录 一：年份</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.year_1}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>举办地点</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.place_1}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>使用面积</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.area_1}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>举办相同展览过往记录 二：年份</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.year_2}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>举办地点</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.place_2}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>使用面积</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.area_2}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>申请单位名称</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.company}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>职务</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.job}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>联系电话</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.tel}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>传真</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.fax}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>联系地址</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.address}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>电子邮箱</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.email}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>申请人</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.applyer}">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>日期</label>
+                <div>
+                  <input type="text" class="form-control" value="{$data.date|date='Y-m-d',###}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>

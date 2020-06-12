@@ -1,0 +1,342 @@
+
+<extend name="Base/common" />
+
+<block name="main">
+    
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        article.article--page, .article.article--page {
+            background: none;
+        }
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity fxss" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('__PUBLIC__/home/img/banner/roomlist.jpg')"></div>
+
+                </div>
+            </article>
+        </section>
+
+        <div class="sbmain">
+            <section class="section section--show">
+                <article class="article article--page">
+
+                    <h2 style="font-weight: bold;">{$Think.lang.jieshao}</h2>
+                    <hr />
+                    <p class="goldcolor">
+                        {$room.title}
+                    </p>
+                    <p class="goldcolor roomtitleen">
+                        {$room.title_en}
+                    </p>
+
+
+                    <div style="color: #7a7a7a;" class="roomdescription">
+                        <p>
+                            {$room.description}
+                        </p>
+                    </div>
+
+
+                    <h2 style="margin-top: 30px; font-weight: bold;">{$Think.lang.sheshi} </h2>
+
+
+                    <hr />
+                    <div class="footer__section grid grid--column-2 footer__section--two" style="padding-left: 0; padding-top: 19px;">
+
+
+                        <div class="footer__column grid__item footer__column--destinations footer__column--large">
+                            <div class="footer__list--container">
+
+                                <style>
+                                    .iconwrap1 {
+                                        background: #d6af6a;
+                                        height: 60px;
+                                        width: 61px;
+                                        display: inline-block;
+                                        line-height: 60px;
+                                        border-radius: 100%;
+                                        text-align: center;
+                                        color: #fff;
+                                        margin-right: 10px;
+                                    }
+
+                                        .iconwrap1 i {
+                                            font-size: 27px;
+                                        }
+
+                                    .footer__list-link {
+                                        display: inline-block;
+                                        line-height: 18px;
+                                        position: relative;
+                                        top: 4px;
+                                        text-transform:capitalize;
+                                    }
+
+
+
+                                    @media only screen and (min-width: 769.1px) {
+
+                                        .footer__section--two .footer__column.footer__column--large {
+                                            width: 50%;
+                                        }
+                                    }
+                                </style>
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <span class="iconwrap1">
+                                            <i class="iconfont icon-door"></i>
+                                        </span>
+                                        <a class="footer__list-link" href="javascript:;">{$Think.lang.mianji}
+                                            <div>{$room.area}m²</div>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__column grid__item footer__column--destinations footer__column--large">
+                            <div class="footer__list--container">
+
+
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <span class="iconwrap1">
+                                            <i class="iconfont icon-user"></i>
+                                        </span>
+                                        <a class="footer__list-link" href="javascript:;">{$Think.lang.renshu}
+                                            <div>{$room.people}{$Think.lang.ren}</div>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <hr />
+                    <div class="footer__section grid grid--column-5 footer__section--two" style="padding-top: 0; padding-left: 0;">
+
+
+                        <div class="footer__column grid__item footer__column--destinations footer__column--large">
+                            <div class="footer__list--container">
+
+
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-wifi goldcolor"></i>
+                                            {$Think.lang.wifi}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-baoxianxiang goldcolor"></i>
+                                            {$Think.lang.baoxian}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-naozhong goldcolor"></i>
+                                            {$Think.lang.jiaoxing}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-linyu  goldcolor"></i>
+                                            {$Think.lang.linyu}
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                            <div class="footer__list--container">
+
+
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-hekricon11 goldcolor"></i>
+                                            {$Think.lang.kafei}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-dianchuifeng goldcolor"></i>
+                                            {$Think.lang.chuifeng}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-kongtiaomianxing goldcolor"></i>
+                                            {$Think.lang.kongtiao}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-yugang  goldcolor"></i>
+                                            {$Think.lang.yugang}
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer__column grid__item footer__column--destinations footer__column--large">
+                            <div class="footer__list--container">
+
+
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-dianreshuihu goldcolor"></i>
+                                            {$Think.lang.shuihu}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-icon goldcolor"></i>
+                                            {$Think.lang.dianshi}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-lvyou goldcolor"></i>
+                                            {$Think.lang.jingguan}
+                                        </a>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+                            <div class="footer__list--container">
+
+
+
+                                <ul class="js-list-content footer__list">
+
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-jiubei goldcolor"></i>
+                                            {$Think.lang.mini}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-dianhua goldcolor"></i>
+                                            {$Think.lang.dianhua}
+                                        </a>
+                                    </li>
+                                    <li class="footer__list-item">
+                                        <a class="footer__list-link" href="javascript:;">
+
+                                            <i class="iconfont icon-mianfeixishu goldcolor"></i>
+                                            {$Think.lang.xishu}
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <a href="{:U('Order/roomlist')}" style="display: block; margin: auto; width: 100px; background: #d6af6a; color: #fff; text-align: center; padding: 10px;">{$Think.lang.order}</a>
+                </article>
+
+
+              
+
+            </section>
+
+            
+        </div>
+
+
+
+
+
+    </main>
+
+<block name="footer">
+</block>
+
+
+

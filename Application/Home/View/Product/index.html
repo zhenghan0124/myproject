@@ -1,0 +1,115 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        td{
+            vertical-align:top;
+        }
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity water" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}')"></div>
+
+                </div>
+            </article>
+        </section>
+
+        <div class="sbmain">
+            <section class="section section--show">
+                <article class="article article--page" style="background: none; padding: 0 160px; margin-bottom: 50px;">
+
+                    <h4>{$Think.lang.guanyu}</h4>
+                    <p>
+                      {$data.description}
+                    </p>
+ 
+                
+                </article>
+            </section>
+        </div>
+        
+        <div class="sbmain">
+            <section class="section section--show">
+                <article class="article article--page" style="padding: 0 160px; margin-bottom: 50px;padding-top:30px;padding-bottom:30px;">
+
+                    <h4 style="margin-bottom:0;">{$Think.lang.weizhi}</h4>
+                    <p>
+
+                        <table style="width:100%;">
+                            <tr>
+                                <td>
+                                    <div id="content">
+                                        {$data.content}
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+
+
+                    </p>
+
+                    <div style="display:none;" id="imgs">
+                        <volist name="data.pic2" id="vo">
+                            <img style="display: block; margin-bottom: 10px; max-width: 300px;" src="/Uploads/{$vo}" />
+                        </volist>
+                       
+
+                        <script>
+                            $('#imgs img').each(function (a, b) {
+                                var content = $('#content td').eq(a).html();
+
+                                $('#content td').eq(a).html('<div style="float:left;    width: calc(100% - 310px);">' + content + '</div><img class="rightimg" style="width:300px;float:right;" src="' + $(this).attr('src') + '"/>');
+                            })
+                        </script>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+<block name="footer">
+</block>

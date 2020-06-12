@@ -1,0 +1,89 @@
+<extend name="Base/common" />
+<block name="main">
+    
+    <style>
+        /*大banner*/
+    </style>
+</head>
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+    
+    <main class="main activity" id="main">
+        <div class="sborderwrap">
+            <div class="sborder">
+                <style>
+                    .info {
+                        position: relative;
+                        top: -1px;
+                        color: #333;
+                    }
+                    .box{
+                        width:328px;
+                    }
+                    .sborder .title1,  .info {
+                        font-size:14px;
+                    }
+                </style>
+                <table>
+                    <tr>
+                        <td colspan="1">
+                            <div class="title" style="margin-bottom: 0;">恭喜，您的房间预订成功<br />并将订单信息发往 {$data.email} </div>
+                            <img src="__PUBLIC__/home/img/success.png" style="display: block; margin: auto; margin-top: 30px;margin-bottom:21px;" />
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="box">
+                                <span class="title1">入住日期</span>
+                                <span class="info">{$data.sdate}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">退房日期</span>
+                                <span class="info">{$data.edate}</span>
+                            </div> <div class="box">
+                                <span class="title1">预订天数</span>
+                                <span class="info">{$data.day}</span>
+                            </div>                        
+                            <div class="box">
+                                <span class="title1">房间数</span>
+                                <span class="info">{$data.nums}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">成人数</span>
+                                <span class="info">{$data.adult}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">儿童数</span>
+                                <span class="info">{$data.child}</span>
+                            </div>    
+                            
+                            <div class="box">
+                                <span class="title1">房间类型</span>
+                                <span class="info">{$data.title}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">总金额</span>
+                                <span class="info">￥{$data.sum_price}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">订单号</span>
+                                <span class="info">{$data.ordersn}</span>
+                            </div>
+                            <div class="box">
+                                <span class="title1">酒店确认号</span>
+                                <span class="info">{$data.confirmationid}</span>
+                            </div>
+                        </td>
+                    </tr>
+                    
+             
+                </table>
+            </div>
+        </div>
+    </main>
+<block name="footer">
+</block>

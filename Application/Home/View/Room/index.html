@@ -1,0 +1,177 @@
+
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+ 
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}')"></div>
+
+                </div>
+            </article>
+        </section>
+
+        <div class="sbmain" style="margin-top: 70px;">
+            <div class="roomdetail">
+
+
+                <div class="OrderFramePage">
+
+                    <div class="OrderFramePaged">
+                        <div class="OrderFramePagedBody">
+                            <volist name="list" id="vo">
+                                <div class="OrderRoom">
+                                    <div class="OrderRoomFrame">
+                                        <div class="OrderRoomTitle">{$vo.title}</div>
+                                        <div class="OrderRoomPanel">
+                                            <div class="OrderRoomImage">
+                                                <img class="OrderRoomImageImg" src="/Uploads/{$vo.pic}" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="OrderRoomSummary">
+                                                {$vo.description}
+                                            </div>
+                                            <div class="OrderRoomPrice">
+                                                <div class="C"></div>
+                                            </div>
+                                            <div class="OrderRoomToggle">
+                                                <a href="{:U('Room/detail',array('id' => $vo['id']))}"><span class="button__label btn1">{$Think.lang.detail}</span></a>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </volist>
+                            <!-- <div class="OrderRoom">
+                                <div class="OrderRoomFrame">
+                                    <div class="OrderRoomTitle">安麓阁</div>
+                                    <div class="OrderRoomPanel">
+                                        <div class="OrderRoomImage">
+                                            <img class="OrderRoomImageImg" src="__PUBLIC__/home/img/room/1.jpg" style="width: 100%; height: 100%;">
+                                        </div>
+                                        <div class="OrderRoomSummary">
+                                            介绍
+                                        </div>
+                                        <div class="OrderRoomPrice">
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderRoomToggle">
+                                            <a href="detail.html"><span class="button__label btn1">客房详情</span></a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="OrderRoom">
+                                <div class="OrderRoomFrame">
+                                    <div class="OrderRoomTitle">百琴轩</div>
+                                    <div class="OrderRoomPanel">
+                                        <div class="OrderRoomImage">
+                                            <img class="OrderRoomImageImg" src="__PUBLIC__/home/img/room/2.jpg" style="width: 100%; height: 100%;">
+                                        </div>
+                                        <div class="OrderRoomSummary">
+                                            介绍
+                                        </div>
+                                        <div class="OrderRoomPrice">
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderRoomToggle">
+                                            <a href="detail.html"><span class="button__label btn1">客房详情</span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="OrderRoom">
+                                <div class="OrderRoomFrame">
+                                    <div class="OrderRoomTitle">赢山居</div>
+                                    <div class="OrderRoomPanel">
+                                        <div class="OrderRoomImage">
+                                            <img class="OrderRoomImageImg" src="__PUBLIC__/home/img/room/3.jpg" style="width: 100%; height: 100%;">
+                                        </div>
+                                        <div class="OrderRoomSummary">
+                                            介绍
+                                        </div>
+                                        <div class="OrderRoomPrice">
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderRoomToggle">
+                                            <a href="detail.html"><span class="button__label btn1">客房详情</span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> -->
+
+                        </div>
+                        <div class="OrderFramePagedSide">
+                            <div class="OrderFramePagedSideFrame">
+
+                                <div class="OrderFramePagedSideImage">
+                                    <img class="OrderFramePagedSideImageImg" src="__PUBLIC__/home/img/banner/1.jpg" style="width: 100%;">
+                                </div>
+                                <div class="OrderFramePagedSideItems">
+
+
+
+
+
+                                    <div class="OrderFramePagedSideBtn">
+                                        <a class="OrderFramePagedSideBtnLink" href="{:U('Order/roomlist')}">{$Think.lang.liji}</a>
+                                    </div>
+
+                                    <div class="OrderFramePagedSideContact">
+                                        <div class="OrderFramePagedSideContactItem">○ Tel：0571-65050888</div>
+                                        <div class="OrderFramePagedSideContactItem">○ Email：reservation.qdh@ahnluh.com</div>
+                                    </div>
+                                    <div class="OrderFramePagedSideWork">{$Think.lang.work}</div>
+
+                                    <div class="OrderFramePagedSideWork">{$Think.lang.day}</div>
+                                    <div class="BR" style="height: 30px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="C"></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+
+<block name="footer">
+</block>
+

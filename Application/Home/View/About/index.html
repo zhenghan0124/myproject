@@ -1,0 +1,126 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+    <style>
+        .activity .grid--column-2 img {
+            width: 100%;
+        }
+
+
+        @media (min-width: 769px) {
+            .grid--column-2 article.article--page, .grid--column-2 .article.article--page{
+                padding-left:5%;
+                padding-right:5%;
+
+            }
+        }
+
+
+        article.article--page, .article.article--page{
+            background:none;
+        }
+
+        td{
+            vertical-align:top;
+        }
+
+        article p:first-of-type, .article p:first-of-type{
+            margin-top:0;
+        }
+		
+		.article.article--page  p:first-child  span{
+			color:#000;
+			font-weight:300;
+		}
+		
+		.article.article--page  p span{
+			font-family:'proxima-nova', 'Arial', 'sans-serif'!important;
+		}
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity" id="main">
+        <section class="section section--show" id="top">
+            <article class="block block--feature block--generic">
+                <div class="block__wrapper">
+                    <div class="block__image" style="background-image: url('/Uploads/{$data1}')"></div>
+
+                </div>
+            </article>
+        </section>
+
+        <div class="sbmain md">
+            <section class="section section--show">
+                <article class="article article--page">
+
+                    {$data.content}
+
+
+                </article>
+
+                <!-- <hr /> -->
+
+                <!-- <article class="article article--page" style="padding-top:21px;">
+
+
+                    <table valign="top" width="100%">
+                      
+                        <tr>
+                            <td style="vertical-align: top">
+                                <p data-redactor-inserted-image="true">
+                                    <img src="__PUBLIC__/home/img/about/1.png" id="image-marker" style="width: 95%; height: 95%">
+                                </p>
+                            </td>
+                            <td width="80%">
+                                <h2 style="font-size: 15px;font-weight:bold;">段强 | 安麓主要创始人</h2>
+                            </td>
+                        </tr>     <tr>
+                            <td style="vertical-align: top">
+                                <p data-redactor-inserted-image="true">
+                                    <img src="__PUBLIC__/home/img/about/2.jpg" id="image-marker" style="width: 95%; height: 95%">
+                                </p>
+                            </td>
+                            <td>
+                                <h2 style="font-size: 15px; font-weight: bold;">Adrian Zecha | 安麓联合创始人</h2>
+                            </td>
+                        </tr>
+                    </table> -->
+                <!-- </article> -->
+            </section>
+        </div>
+
+   
+
+
+         
+    </main>
+
+
+
+<block name="footer">
+</block>
+
+
+
+
+

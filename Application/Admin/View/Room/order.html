@@ -1,0 +1,87 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <!-- <a href="{:U('add_history')}" class="btn btn-fw primary m-b">新增</a> -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="{:U('Room/expUser')}" method="POST">
+            <div class="form-group">
+              <label style="float:left;line-height:40px; height:40px;">下单时间</label>
+
+                  <input type="text" name="starttime" class="form-control form-control-datepicker" value="<?php echo date('Y-m-d') ?>" style="float:left;width:200px;margin-left:10px;" readonly>
+
+                  <input type="text" name="endtime" class="form-control form-control-datepicker" value="<?php echo date('Y-m-d',strtotime('+1 days'))?>"  style="float:left;width:200px;margin-left:10px;" readonly>
+
+            </div>
+            <button type="submit" class="btn primary m-b" style="margin-left:10px;">导出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>房型</th>
+            <th>入住日期</th>
+            <th>离店日期</th>
+            <th>下单时间</th>
+            <th>支付方式</th>
+            <th>网页订单号</th>
+            <th>支付订单号</th>
+            <th>畅联订单号</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td>{$data.name}</td>
+              <td>{$data.title}</td>
+              <td>{$data.sdate}</td>
+              <td>{$data.edate}</td>
+              <td>{$data.date}</td>
+              <if condition="$data['paytype'] eq 22"><td>支付宝</td><elseif condition="$data['paytype'] eq 21"/><td>微信</td><else /><td>到店</td></if>
+              <td>{$data.ordersn}</td>
+              <td>{$data.transaction_id}</td>
+              <td>{$data.confirmationid}</td>
+              <!-- <td>{$data.time|date='Y-m-d',###}</td>
+              <td>{$data.time|date='Y-m-d',###}</td> -->
+              <td>
+                <a href="{:U('edit_order',array('id' => $data['id']))}">查看</a>
+                <a href="{:U('del_order',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>
+<block name="footer_common">
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/admin/libs/jquery/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+  <script>
+    $('.form-control-datepicker').datepicker({
+      language: "zh-CN",
+      format: "yyyy-mm-dd",
+      autoclose: true
+    });
+  </script>
+</block>

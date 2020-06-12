@@ -1,0 +1,210 @@
+
+<extend name="Base/common" />
+
+<block name="main">
+    
+
+    
+    <script src="__PUBLIC__/home/js/laydate/laydate.js"></script>
+
+    <style>
+      
+
+           input,select{
+               color:#0094ff!important;
+           }
+            input.ca {
+            background-image:url('__PUBLIC__/home/img/ca.jpg');    
+    background-repeat: no-repeat;
+    background-position: right;
+            }
+
+    </style>
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main activity" id="main">
+        <div class="sborderWrap">
+            <div class="sborder">
+                <form action="{:U('Order/roomlist')}" method="post" id="test">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="title">{$Think.lang.riqi}</div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.start}</span>
+                                <input type="text" class="ca" id="start" onchange="changedate()" name="start" value="<?php echo date("Y-m-d") ?>" />
+                            </div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.end}</span>
+                                <input type="text" class="ca" id="end" name="end" value="<?php echo date("Y-m-d",strtotime("+1 day")) ?>" />
+                            </div>
+
+                            <div class="title">{$Think.lang.kefang}</div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.nums}</span>
+                                <select name="nums">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+
+                            <div class="title">{$Think.lang.youhui}</div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.code}</span>
+                                <input type="text" name="code"/>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="title">{$Think.lang.xuanze}</div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.adult}</span>
+                                <select name="adult">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.child}</span>
+                                <select name="child">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="title">{$Think.lang.yudingday}</div>
+                            <div class="box">
+                                <span class="title1">{$Think.lang.days}</span>
+                                <select name="day">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            <a href="javascript::" onclick="check()"><span class="next btn22">{$Think.lang.next}</span></a>
+                            <!-- <button><span class="next btn22">下一步</span></button> -->
+                        </td>
+                    </tr>
+                </table>
+                </form>
+                <script>
+                  function changedate(){
+					return;
+                    var bdate = document.getElementById("start").value;
+                    var bdate = new Date(bdate);
+                    alert(1);
+                    bdate.setDate(bdate.getDate()+1);
+                    // alert(bdate.getDate());
+                    var year = bdate.getFullYear();
+                    var month = bdate.getMonth()+1;
+                    if(month < 10){
+                      month = '0'+month;
+                    }
+                    var date = bdate.getDate();
+                    document.getElementById("end").value = year+'-'+month+'-'+date;
+                  }
+                </script>
+                <script>
+                function check(){
+                    var form = document.getElementById('test');
+                    //再次修改input内容
+
+                    form.submit();
+                }
+                </script>
+            </div>
+        </div>
+
+
+        <script>
+	    function addDate(date, days) {
+            if (days == undefined || days == '') {
+                days = 1;
+            }
+            var date = new Date(date);
+            date.setDate(date.getDate() + days);
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            return date.getFullYear() + '-' + getFormatDate(month) + '-' + getFormatDate(day);
+        }
+		  function getFormatDate(arg) {
+            if (arg == undefined || arg == '') {
+                return '';
+            }
+
+            var re = arg + '';
+            if (re.length < 2) {
+                re = '0' + re;
+            }
+
+            return re;
+        }
+	
+	
+        laydate.render({
+            elem: '#start',
+			min: '{$start}',
+			done: function(value, date, endDate){
+				var end=$('#end').val();
+				if(value>=end){
+					$('#end').val(addDate(value,1));
+				}
+			},
+        });
+        laydate.render({
+            elem: '#end',
+			min:+1,
+			done: function(value, date, endDate){
+				var start=$('#start').val();
+				if(value<=start){
+					$('#start').val(addDate(value,-1));
+				}
+			},        
+        });
+        </script>
+
+
+
+
+    </main>
+
+
+<block name="footer">
+</block>
+
+
+
+

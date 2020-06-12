@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <link href="/css/wechat_pay.css" rel="stylesheet" media="screen" />
+    <title>订单支付-{:C('SITE_NAME')}</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body style="">
+    <div class="body">
+        <h1 class="mod-title">
+            <span class="ico-wechat"></span><span class="text">微信支付</span>
+        </h1>
+        <div class="mod-ct">
+            <div class="order">
+            </div>
+            <div class="amount">￥{$data.sum_price}</div>
+            <div class="qr-image" style="">
+                <img style="width:230px;height:230px;" id="billImage" src="data:image/png;base64,{$data.qrcode}">
+                <div id="count"></div>
+            </div>
+            <!--detail-open 加上这个类是展示订单信息，不加不展示-->
+            <div class="detail detail-open" id="orderDetail" style="">
+                <dl class="detail-ct" style="display: block;">
+                    <dt>商家</dt>
+                    <dd id="storeName">{:C('SITE_NAME')}</dd>
+                    <dt>商品名称</dt>
+                    <dd id="productName">{$data.title}{$data.pmtitle}</dd>
+                    <dt>交易单号</dt>
+                    <dd id="billId">{$data.ordersn}</dd>
+                    <dt>创建时间</dt>
+                    <dd id="createTime">{$data.time|date='Y-m-d H:i:s',###}</dd>
+                </dl>
+                <a href="javascript:void(0)" class="arrow"><i class="ico-arrow"></i></a>
+            </div>
+            <div class="tip">
+                <span class="dec dec-left"></span>
+                <span class="dec dec-right"></span>
+                <div class="ico-scan"></div>
+                <div class="tip-text">
+                    <p>请使用微信扫一扫</p>
+                    <p>扫描二维码完成支付</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: absolute;background: rgba(0, 0, 0, 0.74);width: 100%;height: 100%;z-index: 9;display:none;top:0;" id="timeout">
+
+        <div style="position: absolute;background: #fff;top: 21%;left: 30%;right: 30%;text-align: center;vertical-align: middle;font-size: 26px;border-radius: 2%;
+    padding: 10% 0;">
+           支付超时
+        </div>
+    </div>
+    <script>
+        function countTime() {
+
+            var maxtime = 90; //
+            function CountDown() {
+                if (maxtime >= 0) {
+                    minutes = Math.floor(maxtime / 60);
+                    seconds = Math.floor(maxtime % 60);
+                    msg = "支付时间" + minutes + "分" + seconds + "秒";
+                    document.all["count"].innerHTML = msg;
+                    console.log(msg);
+                    //if (maxtime == 5 * 60) alert("还剩5分钟");
+                    --maxtime;
+
+                } else {
+                    clearInterval(timer);
+                    document.getElementById('timeout').style.display = 'block';
+                }
+            }
+            timer = setInterval(CountDown, 1000);
+        }
+
+        countTime()
+    </script>
+</body>
+<link href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script>
+    $(function () {
+        $("#orderDetail .arrow").on("click", function () {
+            $(".detail-ct").toggle('slow');
+            if ($("#orderDetail").hasClass("detail-open")) {
+                $("#orderDetail").removeClass("detail-open").addClass("detail-close");
+            } else {
+                $("#orderDetail").addClass("detail-open").removeClass("detail-close");
+            }
+        });
+        setInterval("ajaxstatus()", 3000);//轮询查询订单支付状态
+    });
+
+    function ajaxstatus() {
+        // alert(1);
+        $.ajax({
+            url: "{:U('Index/checkWechatpay')}",
+            type: "POST",
+            dataType: "json",
+            data: { ordersn: "{$data.ordersn}" },
+            success: function (data) {
+                if (console) {
+                    console.log(data);
+                }
+                if (data.trade_state == 'SUCCESS') {
+                    swal({
+                        title: "支付成功",
+                        text: "",
+                        type: "success"
+                    }, function () {
+                        window.location.href = "{:U('Index/complete',['id' => $data['orderid']])}"; //页面跳转
+                    });
+                }
+            },
+            error: function () {
+                // alert("请求订单状态出错");
+            }
+        });
+
+    }
+</script>

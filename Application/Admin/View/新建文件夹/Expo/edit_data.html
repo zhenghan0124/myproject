@@ -1,0 +1,603 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="__ACTION__" method="post">
+            <div class="form-group">
+              <label>标题</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title" class="form-control" value="{$data.title}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>标题（EN）</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="title_en" class="form-control" value="{$data.title_en}">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>图片</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload qy-upload-pic upload-pic">
+                    <ul>
+                      <notempty name="data.pic">
+                        <volist name="data.pic" id="vo">
+                          <li>
+                            <img src="__ROOT__/Uploads/{$vo}">
+                            <input type="hidden" name="pic[]" value="{$vo}">
+                            <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                          </li>
+                        </volist>
+                      </notempty>
+                      <li class="upload-pic-wrap">
+                        <i class="fa fa-plus"></i>
+                        <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>附件</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="qy-upload qy-upload-attachment upload-pic">
+                    <ul>
+                      <notempty name="data.attachment">
+                        <li>
+                          <img src="__PUBLIC__/admin/assets/images/document-icon.png">
+                          <input type="hidden" name="attachment" value="{$data.attachment}">
+                          <span class="qy-upload-del"><i class="fa fa-remove"></i></span>
+                        </li>
+                      </notempty>
+                      <li class="upload-pic-wrap" <notempty name="data.attachment"> style="display:none;"</notempty>>
+                      <i class="fa fa-plus"></i>
+                      <input type="file" class="upload-pic-button" name="qy_upload">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>参数说明</label>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[0][name]" class="form-control" placeholder="名称" value="{$data.param.0.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[0][area]" class="form-control" placeholder="面积" value="{$data.param.0.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[0][place]" class="form-control" placeholder="位置" value="{$data.param.0.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[0][person]" class="form-control" placeholder="人数" value="{$data.param.0.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[0][num]" class="form-control" placeholder="展位" value="{$data.param.0.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[1][name]" class="form-control" placeholder="名称" value="{$data.param.1.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[1][area]" class="form-control" placeholder="面积" value="{$data.param.1.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[1][place]" class="form-control" placeholder="位置" value="{$data.param.1.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[1][person]" class="form-control" placeholder="人数" value="{$data.param.1.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[1][num]" class="form-control" placeholder="展位" value="{$data.param.1.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[2][name]" class="form-control" placeholder="名称" value="{$data.param.2.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[2][area]" class="form-control" placeholder="面积" value="{$data.param.2.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[2][place]" class="form-control" placeholder="位置" value="{$data.param.2.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[2][person]" class="form-control" placeholder="人数" value="{$data.param.2.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[2][num]" class="form-control" placeholder="展位" value="{$data.param.2.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[3][name]" class="form-control" placeholder="名称" value="{$data.param.3.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[3][area]" class="form-control" placeholder="面积" value="{$data.param.3.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[3][place]" class="form-control" placeholder="位置" value="{$data.param.3.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[3][person]" class="form-control" placeholder="人数" value="{$data.param.3.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[3][num]" class="form-control" placeholder="展位" value="{$data.param.3.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[4][name]" class="form-control" placeholder="名称" value="{$data.param.4.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[4][area]" class="form-control" placeholder="面积" value="{$data.param.4.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[4][place]" class="form-control" placeholder="位置" value="{$data.param.4.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[4][person]" class="form-control" placeholder="人数" value="{$data.param.4.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[4][num]" class="form-control" placeholder="展位" value="{$data.param.4.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[5][name]" class="form-control" placeholder="名称" value="{$data.param.5.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[5][area]" class="form-control" placeholder="面积" value="{$data.param.5.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[5][place]" class="form-control" placeholder="位置" value="{$data.param.5.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[5][person]" class="form-control" placeholder="人数" value="{$data.param.5.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[5][num]" class="form-control" placeholder="展位" value="{$data.param.5.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[6][name]" class="form-control" placeholder="名称" value="{$data.param.6.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[6][area]" class="form-control" placeholder="面积" value="{$data.param.6.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[6][place]" class="form-control" placeholder="位置" value="{$data.param.6.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[6][person]" class="form-control" placeholder="人数" value="{$data.param.6.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[6][num]" class="form-control" placeholder="展位" value="{$data.param.6.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[7][name]" class="form-control" placeholder="名称" value="{$data.param.7.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[7][area]" class="form-control" placeholder="面积" value="{$data.param.7.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[7][place]" class="form-control" placeholder="位置" value="{$data.param.7.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[7][person]" class="form-control" placeholder="人数" value="{$data.param.7.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[7][num]" class="form-control" placeholder="展位" value="{$data.param.7.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[8][name]" class="form-control" placeholder="名称" value="{$data.param.8.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[8][area]" class="form-control" placeholder="面积" value="{$data.param.8.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[8][place]" class="form-control" placeholder="位置" value="{$data.param.8.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[8][person]" class="form-control" placeholder="人数" value="{$data.param.8.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[8][num]" class="form-control" placeholder="展位" value="{$data.param.8.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param[9][name]" class="form-control" placeholder="名称" value="{$data.param.9.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[9][area]" class="form-control" placeholder="面积" value="{$data.param.9.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[9][place]" class="form-control" placeholder="位置" value="{$data.param.9.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[9][person]" class="form-control" placeholder="人数" value="{$data.param.9.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param[9][num]" class="form-control" placeholder="展位" value="{$data.param.9.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="form-group">
+              <label>参数说明（EN）请跟上面保持对应</label>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[0][name]" class="form-control" placeholder="名称" value="{$data.param_en.0.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[0][area]" class="form-control" placeholder="面积" value="{$data.param_en.0.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[0][place]" class="form-control" placeholder="位置" value="{$data.param_en.0.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[0][person]" class="form-control" placeholder="人数" value="{$data.param_en.0.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[0][num]" class="form-control" placeholder="展位" value="{$data.param_en.0.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[1][name]" class="form-control" placeholder="名称" value="{$data.param_en.1.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[1][area]" class="form-control" placeholder="面积" value="{$data.param_en.1.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[1][place]" class="form-control" placeholder="位置" value="{$data.param_en.1.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[1][person]" class="form-control" placeholder="人数" value="{$data.param_en.1.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[1][num]" class="form-control" placeholder="展位" value="{$data.param_en.1.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[2][name]" class="form-control" placeholder="名称" value="{$data.param_en.2.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[2][area]" class="form-control" placeholder="面积" value="{$data.param_en.2.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[2][place]" class="form-control" placeholder="位置" value="{$data.param_en.2.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[2][person]" class="form-control" placeholder="人数" value="{$data.param_en.2.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[2][num]" class="form-control" placeholder="展位" value="{$data.param_en.2.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[3][name]" class="form-control" placeholder="名称" value="{$data.param_en.3.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[3][area]" class="form-control" placeholder="面积" value="{$data.param_en.3.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[3][place]" class="form-control" placeholder="位置" value="{$data.param_en.3.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[3][person]" class="form-control" placeholder="人数" value="{$data.param_en.3.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[3][num]" class="form-control" placeholder="展位" value="{$data.param_en.3.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[4][name]" class="form-control" placeholder="名称" value="{$data.param_en.4.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[4][area]" class="form-control" placeholder="面积" value="{$data.param_en.4.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[4][place]" class="form-control" placeholder="位置" value="{$data.param_en.4.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[4][person]" class="form-control" placeholder="人数" value="{$data.param_en.4.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[4][num]" class="form-control" placeholder="展位" value="{$data.param_en.4.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[5][name]" class="form-control" placeholder="名称" value="{$data.param_en.5.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[5][area]" class="form-control" placeholder="面积" value="{$data.param_en.5.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[5][place]" class="form-control" placeholder="位置" value="{$data.param_en.5.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[5][person]" class="form-control" placeholder="人数" value="{$data.param_en.5.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[5][num]" class="form-control" placeholder="展位" value="{$data.param_en.5.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[6][name]" class="form-control" placeholder="名称" value="{$data.param_en.6.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[6][area]" class="form-control" placeholder="面积" value="{$data.param_en.6.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[6][place]" class="form-control" placeholder="位置" value="{$data.param_en.6.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[6][person]" class="form-control" placeholder="人数" value="{$data.param_en.6.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[6][num]" class="form-control" placeholder="展位" value="{$data.param_en.6.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[7][name]" class="form-control" placeholder="名称" value="{$data.param_en.7.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[7][area]" class="form-control" placeholder="面积" value="{$data.param_en.7.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[7][place]" class="form-control" placeholder="位置" value="{$data.param_en.7.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[7][person]" class="form-control" placeholder="人数" value="{$data.param_en.7.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[7][num]" class="form-control" placeholder="展位" value="{$data.param_en.7.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[8][name]" class="form-control" placeholder="名称" value="{$data.param_en.8.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[8][area]" class="form-control" placeholder="面积" value="{$data.param_en.8.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[8][place]" class="form-control" placeholder="位置" value="{$data.param_en.8.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[8][person]" class="form-control" placeholder="人数" value="{$data.param_en.8.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[8][num]" class="form-control" placeholder="展位" value="{$data.param_en.8.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[9][name]" class="form-control" placeholder="名称" value="{$data.param_en.9.name}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[9][area]" class="form-control" placeholder="面积" value="{$data.param_en.9.area}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[9][place]" class="form-control" placeholder="位置" value="{$data.param_en.9.place}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[9][person]" class="form-control" placeholder="人数" value="{$data.param_en.9.person}">
+                  </div>
+                  <div class="col-md-2">
+                    <input type="text" name="param_en[9][num]" class="form-control" placeholder="展位" value="{$data.param_en.9.num}">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="form-group">
+              <label>排序</label>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="rank" class="form-control" value="{$data.rank}">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="id"value="{$data.id}">
+            <button type="submit" class="btn primary m-b">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="footer_common">
+  <!-- qy-upload -->
+  <script src="__PUBLIC__/admin/libs/jquery/jquery-form/jquery.form.min.js"></script>
+  <script src="__PUBLIC__/admin/scripts/qy-upload.js"></script>
+  <script src="__PUBLIC__/admin/scripts/qy-upload-file.js"></script>
+  <script type="text/javascript">
+    $('.qy-upload-pic').qy_upload("{:U('Upload/index')}","pic",1);
+    $('.qy-upload-attachment').qy_upload_file("{:U('Upload/attachment')}","attachment",0);
+  </script>
+</block>

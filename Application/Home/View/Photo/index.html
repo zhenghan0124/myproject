@@ -1,0 +1,183 @@
+<extend name="Base/common" />
+
+<block name="main">
+
+    
+    <link href="__PUBLIC__/home/css/swiper.min.css" rel="stylesheet" />
+    <script src="__PUBLIC__/home/js/swiper.min.js"></script>
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-top {
+            height: 90%;
+            width: 100%;
+        }
+
+        .gallery-thumbs {
+            height: 8%;
+            height: 8vh;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+            .gallery-thumbs .swiper-slide {
+                /*width: 25%;
+                height: 100%;
+                opacity: 0.4;*/
+                width: 10vw !important;
+                height: 6vw !important;
+                margin-right: 0% !important;
+            }
+
+            .gallery-thumbs .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+
+
+        .swiper-slide.swiper-slide-visible:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(51, 51, 51, 0.66);
+        }
+
+        .gallery-thumbs .swiper-slide-thumb-active:after {
+            display: none;
+        }
+
+        .swiper-button-next.swiper-button-white,  .swiper-button-prev.swiper-button-white {    display: flex;
+    align-items: center;
+            background-image: none;
+        }
+
+            .swiper-button-next.swiper-button-white div,   .swiper-button-prev.swiper-button-white div {
+                color: #000000;
+                background: #fff;
+                border-radius: 100%;
+              height: 23px;
+                width: 24px;
+                display: block;
+                padding: 0;
+                margin: 0;
+                line-height: 24px;
+                text-align: center;
+            }
+
+            .swiper-button-next.swiper-button-white i,   .swiper-button-prev.swiper-button-white i {
+                font-size: 24px;
+                position: relative;
+                left: 0px;
+            }
+    </style>
+
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+    
+    <main class="main" id="main" style="height: 100vh;">
+
+
+        
+
+        <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+                <volist name="data.pic" id="vo">
+                    <div class="swiper-slide" style="background-image: url(/Uploads/{$vo})"></div>
+                </volist>
+                <!-- <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/4.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/2.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/3.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/9.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/5.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/6.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/7.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/8.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/1.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/10.jpg)"></div> -->
+            </div>
+
+        </div>
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <volist name="data.pic" id="vo">
+                    <div class="swiper-slide" style="background-image: url(/Uploads/{$vo})"></div>
+                </volist>
+                <!-- <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/4.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/2.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/3.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/9.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/5.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/6.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/7.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/8.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/1.jpg)"></div>
+                <div class="swiper-slide" style="background-image: url(__PUBLIC__/home/img/photo/10.jpg)"></div> -->
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white">
+                <div><i class="iconfont icon-1202youjiantou"></i></div>
+            </div>
+            <div class="swiper-button-prev swiper-button-white">
+                <div><i class="iconfont icon-left-copy"></i></div>
+            </div>
+        </div>
+        <script>
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                //spaceBetween: 10,
+                slidesPerView: 6,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                //spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
+        </script>
+
+        
+    </main>
+
+
+
+<block name="footer">
+</block>
+
+
+

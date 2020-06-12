@@ -1,0 +1,1487 @@
+﻿.footer__logos .icon__item .icon .iconfont {
+    font-size: 2.6rem;
+}
+
+
+.footer__section {
+    padding-bottom: 0;
+}
+
+.footer__bottom {
+    padding-top: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+
+.header:after { /*display: none;*/
+}
+
+
+.navigation__link, .navigation__link:visited { /*color: #000;*/
+}
+
+
+input[type=text], input[type=number], input[type=email], input[type=password], input[type=tel], textarea, select {
+    border: 1px solid #eee !important;
+    color: #000;
+    background: #FFF;
+    font-family: 'montserrat', sans-serif;
+    padding: 6px 10px;
+    width: 232px;
+    background: #eee;
+}
+
+textarea {
+    height: 222px;
+}
+
+
+/*logo相关*/
+.header__image {
+    max-height: initial;
+}
+
+
+/*导航*/
+.navigation__link span { /*font-weight: normal;*/
+}
+
+.block__image {
+    background-position: top;
+}
+
+.navigation__link span { /*text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.53);*/
+}
+
+.article--page p {
+    max-width: inherit;
+}
+/*框架*/
+body {
+    background-color: #f0f0f0;
+}
+
+/*.main {
+    position: relative;
+    z-index: 99;
+}
+.offers__wrapper{
+    background:none;
+}*/
+
+.header:after { /*height: 60%;
+    background: linear-gradient(to bottom, rgba(68, 78, 94, 0.4) 0%, rgba(255, 255, 255, 0) 100%);*/
+}
+
+.sbmain {
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.sbmain .local-experiences__content {
+    max-width: 100%;
+    padding: 36px 0 0;
+}
+
+.sbmain .local-experience__buttons {
+    width: auto;
+    text-align: right;
+}
+
+.sbmain.md {
+    max-width: 1024px;
+}
+
+
+
+
+#top .block--full-window-height:before {
+    padding-top: 0;
+}
+
+
+.block--full-window-height.usesVH {
+    height: 100vh;
+}
+
+
+article.article--page, .article.article--page {
+    padding-left: 0;
+}
+
+
+.article.article--page h1 {
+    font-size: 18px;
+    letter-spacing: 26px;
+    text-indent: 26px;
+    font-weight: 400; /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+    text-transform: capitalize;
+}
+
+.button--simple .button__label {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.header {
+    position: absolute;
+}
+
+.logoimg {
+    margin-top: 5px;
+    height: 46px;
+}
+
+.navigation__link {
+    font-size: 1.3rem;
+}
+/*按钮样式一*/
+.btn1 {
+    margin-top: 30px;
+    display: inline-block;
+    background-image: url(../img/btn1bg.png);
+    padding-left: 91px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -30px;
+}
+
+.btn1 .icon-you {
+    font-size: 12px;
+}
+
+.btn1 .icon-down {
+    display: none;
+    font-size: 12px; /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+}
+
+.book-button {
+    width: auto;
+    display: block;
+    margin-left: 10px;
+    padding: 13px;
+    background: #323232;
+}
+
+.book-button:hover {
+    background: rgba(50, 50, 50, 0.90);
+}
+
+.Active .btn1 .icon-you {
+    display: none;
+}
+
+.Active .btn1 .icon-down {
+    display: inline-block;
+}
+
+.btn21 {
+    background-image: url(../img/btn2bg1.png);
+}
+
+.btn22 {
+    background-image: url(../img/btn2bg2.png);
+}
+
+.sborder .btn21, .sborder .btn22 {
+    display: inline-block !important;
+    margin-top: 30px;
+    display: inline-block;
+    padding-left: 100px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -30px;
+    height: 30px;
+}
+
+.icon__label.btn1 {
+    height: 31px;
+    background-size: 67px;
+    font-weight: normal;
+    padding-left: 76px;
+    line-height: 34px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #444;
+    font-size: 14px;
+}
+
+
+.icon__link {
+    color: #444;
+}
+
+.icon__item.block__readmore .icon__link {
+    color: #fff;
+}
+
+.button--simple .button__label {
+    transition: left 800ms ease-out;
+}
+
+.button--simple .button__label:hover {
+    left: 1px
+}
+
+
+
+.button__label.btn1 {
+    font-size: 12px; /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+    text-transform: capitalize;
+}
+
+.button__label.btn1 {
+    transition: left 300ms ease-out;
+    position: relative;
+}
+
+.button__label.btn1:hover {
+    left: 10px
+}
+
+/*首页 两个栏目的*/
+.local-experience__title {
+    letter-spacing: 16px;
+    font-size: 15px; /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+}
+
+
+.local-experience__expiry {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    font-size: 14px;
+}
+
+.article--page p {
+}
+/*首页 两个栏目的*/
+.block__readmore .icon__label {
+    margin-top: 6px;
+}
+
+.sbmain .block__container {
+    margin-bottom: 1.8rem;
+}
+
+.sbmain .block__container .icon__label.btn1 {
+    margin-left: 0;
+}
+
+
+.lan2 .block > .block__wrapper {
+    max-height: 430px;
+}
+
+.lan2 {
+    max-height: 460px;
+}
+
+.grid--full-window-height > .grid__wrapper {
+    padding: 0;
+}
+
+/*------------*/
+/*方框*/
+.local-experience--platinum .local-experience__content {
+    border: none;
+}
+
+
+
+
+/*餐厅*/
+.block__title--large, .local-experiences__text h2 {
+    font-size: 24px;
+}
+
+
+
+/*字体颜色*/
+.goldcolor {
+    color: #d8ae69 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+/*订单*/
+.sborderWrap {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/banner/roomlist.jpg');
+    background-size: cover;
+}
+
+.sborderwrap {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/banner/roomlist.jpg');
+    background-size: cover;
+}
+
+.sborder {
+    background: #fff; /*width: 47%;*/
+    float: right;
+    margin-top: 73px;
+    margin-top: 86px;
+    margin-right: 15px;
+    padding: 70px 90px 70px 160px;
+    padding: 2% 3% 2% 4%;
+}
+
+.sborder td {
+    vertical-align: top;
+}
+
+.sborder .box {
+    margin-bottom: 16px;
+    margin-right: 70px;
+    margin-right: 10px;
+}
+
+
+
+
+.sborder .title {
+    font-size: 21px;
+    margin-bottom: 16px;
+    color: #d8ae69;
+}
+
+.sborder .title1 {
+}
+
+
+
+.sborder select {
+}
+
+.sborder .next { /*color: #d8ae69;*/
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+
+/*.sborder li {
+                display:inline-block;
+                width:318px;
+                margin-right:92px;
+            }
+
+                .sborder li .title {
+                    font-size:29px;
+                }*/
+
+.sborder .title1 {
+    min-width: 90px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+input {
+    font-size: 14px;
+}
+
+input, select option { /*text-align: center;*/
+}
+
+
+.block--generic:before {
+    padding-top: 41%;
+}
+
+.article--page p {
+    color: #8a8a8a;
+}
+
+
+
+.sborder {
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+}
+
+
+/*下拉三角*/
+
+
+.select a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.select ul, .select li {
+    list-style: none;
+}
+
+.select span {
+    line-height: 44px;
+    display: block;
+    margin-bottom: 20px;
+    margin-bottom: 7px;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    padding: 0 10px;
+    font-weight: normal;
+}
+
+
+/*给以整体的阴影和圆角 但是不能overflow*/
+.drop {
+    left: 0;
+    right: 0;
+    top: -9999px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: translateY(-50px); /*y轴方向平移*/
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-transition: all .2s ease-in; /*平移时间0.2s*/
+    transition: all .2s ease-in;
+}
+/*给送个下拉助攻*/
+.select:hover span {
+    background-color: #d8ae69;
+}
+
+.select:hover span a:after {
+    -webkit-transform: rotate(180deg); /*旋转180度*/
+    transform: rotate(180deg);
+}
+
+.select:hover .drop {
+    position: static;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+/*一个很重要的三角形*/
+.drop li:first-child:before {
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto; /*居中*/
+    display: block; /*独占一行*/
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2); /*配合整体一样的投影*/
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); /*一个正方形倾斜四十五度就是三角了但是要把下半部分藏起来*/
+    position: relative;
+    top: -5px; /*果断的露出上半部分*/
+    z-index: 1; /*果断的隐藏下半部分*/
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.drop li a {
+    color: #888;
+    line-height: 40px;
+    border-bottom: solid 1px #eee;
+    font-size: 14px;
+    display: block;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    text-align: center;
+    font-weight: normal;
+}
+/*以下两块：控制第一个和最后一个li要圆角，因为最外边的div没有overflow 也不可以overflow*/
+.drop li:first-child a {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: -10px;
+}
+
+.drop li:last-child a {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: none;
+}
+/*hover事件给了li，先改变三角 再改变a*/
+.drop li:hover:before {
+    background-color: #41b1d9;
+}
+
+.drop li:hover a {
+    background-color: #d8ae69;
+    color: #fff;
+}
+
+
+
+
+
+/*logo 修改*/
+.header__logo .header__image img {
+    width: 143px;
+}
+
+
+
+.article.article--page2 {
+    background: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/*导航条相关设置*/
+.headerWidget10 {
+    width: 100%;
+    font-size: 16px;
+    background: #ffffff;
+    position: relative;
+    z-index: 100;
+}
+
+.headerWidget10 i {
+    font-size: 12px;
+}
+
+.headerWidget10 .navigator {
+    width: 100%;
+    height: 46px;
+    background: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    transition: height .3s ease-in-out;
+}
+
+.headerWidget10 .navigator {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headerWidget10 .navigator .topBar {
+    width: auto;
+    position: relative;
+    float: left;
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+.headerWidget10 .navigator .topBar {
+    padding: 0;
+}
+
+.headerWidget10 .navigator .topBar .navBurger, .headerWidget10 .navigator .topBar .navClose {
+    display: none;
+}
+
+.headerWidget10 a {
+    text-decoration: none;
+    outline: none;
+}
+
+.headerWidget10 .navigator .topBar .logoWrap .logo {
+    display: block;
+    margin: 0rem 1.5rem;
+    height: 26px;
+}
+
+.headerWidget10 .navigator .topBar .logoWrap .logo {
+    width: 138px;
+    height: 46px;
+    margin: 0 48px 0 0;
+    margin-top: 0px;
+    margin-right: 48px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.headerWidget10 .navigator .topBar .mobileBooking {
+    display: none;
+}
+
+.headerWidget10 .navigator > .rightPart {
+    font-size: 0.75rem;
+    color: #bdbdbd;
+    position: absolute;
+    top: 13px;
+    right: 130px;
+    right: 81px;
+    z-index: 1;
+}
+
+.headerWidget10 li {
+    list-style: none;
+}
+
+.headerWidget10 .navigator > .rightPart > li {
+    float: left;
+    margin: 0 0.75rem;
+    cursor: pointer;
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown {
+    position: relative;
+    outline: none;
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown .dropdownList {
+    background: rgba(248, 248, 248, 0.8);
+    border: 1px solid rgba(207, 164, 107, 0.1);
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown .dropdownList {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.headerWidget10 li {
+    list-style: none;
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown .dropdownList li {
+    padding: 5px 12px;
+}
+
+.headerWidget10 a {
+    text-decoration: none;
+    outline: none;
+}
+
+.headerWidget10 .navigator > .rightPart a {
+    color: #bdbdbd;
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown .dropdownList a {
+    color: #323232;
+}
+
+.headerWidget10 .navigator > .rightPart .topNavBarDropdown .dropdownList a {
+    white-space: nowrap;
+}
+
+.headerWidget10 .navigator .bottomBar {
+    overflow: hidden;
+    padding-left: 1rem;
+}
+
+.headerWidget10 .navigator .bottomBar {
+    padding: 0;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu {
+    color: #323232;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu {
+    width: 100%;
+    height: 46px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    overflow: hidden;
+    display: table;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu {
+    max-width: 960px;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu > .navMenuItem {
+    float: left;
+    line-height: 46px;
+    margin-right: 48px;
+    display: table-cell;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu a {
+    color: #323232;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+.headerWidget10 .navigator .bottomBar .navMenu a:after {
+    transition: width 300ms ease-out;
+    content: '';
+    display: block;
+    width: 0;
+    background: #c8a074;
+    height: 2px;
+    margin: auto;
+    position: relative;
+    top: -2px;
+    z-index: 2;
+}
+
+.headerWidget10 .navigator .bottomBar .navMenu > .navMenuItem:hover a::after {
+    width: 28px;
+    max-width: 100%;
+}
+
+.headerWidget10 .navigator .bottomBar .bookingBtn {
+    background: rgba(207, 164, 107, 0.1);
+    color: #CFA46B;
+}
+
+.headerWidget10 .navigator .bottomBar .bookingBtn {
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+    padding: 1.35rem 0.875rem 1.35rem 1.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.headerWidget10 .navigator .bottomBar .bookingBtn {
+    transition: all 0.15s ease-in-out;
+}
+
+.headerWidget10 .navigator .bottomBar .bookingBtn:hover {
+    background: rgba(207, 164, 107, 0.15);
+}
+
+
+.headerWidget10 .navigator .bottomBar .navMenu .navMenuItem .active {
+    font-weight: bold;
+}
+
+
+#header {
+    display: none;
+}
+
+
+
+
+
+.footer__logos-list a {
+    position: relative;
+}
+
+.footer__logos-list a:hover img {
+    display: block;
+}
+
+.block__title, .local-experiences__text h2 {
+    font-size: 18px;
+}
+
+article h1, article h2, article h3, article h4, article h5, .article h1, .article h2, .article h3, .article h4, .article h5 {
+    margin-bottom: 30px;
+    font-size: 18px; /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+}
+
+article p, .article p {
+    font-size: 14px;
+    line-height: 1.7em; /*text-transform: capitalize;*/
+}
+
+
+.footer__list-link {
+    text-transform: none;
+    letter-spacing: 0.005em;
+}
+
+br {
+    border-color: rgba(255, 255, 255, 0.41);
+}
+
+
+/*标题*/
+.article.article--page .desc {
+    font-weight: 500;
+    font-size: 14px;
+    color: #999999;
+}
+
+
+/*联系我们*/
+.footer__section--two .footer__column.footer__column--large .footer__list--container {
+    width: auto;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomTitle { /*font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif;*/
+}
+
+
+/*客房列表*/
+.activity .grid--column-2 img {
+    width: 100%;
+}
+
+
+/*底部链接方式*/
+.footer__content {
+    position: relative;
+}
+
+.footer__content .imgwrap {
+    position: absolute;
+    bottom: 60px;
+    left: 26px;
+    height: 130px;
+    z-index: 99;
+}
+
+.footer__content .imgwrap .img {
+    width: 130px;
+    height: 0;
+    transition: height 300ms ease-out;
+    box-shadow: 1px 1px 3px #ccc;
+}
+
+.footer__logos-item.icon__item:hover .img {
+    height: 130px;
+}
+
+@media (min-width: 769px) {
+    .grid--column-2 article.article--page, .grid--column-2 .article.article--page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.OrderFramePaged {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-top: -45px;
+}
+
+.OrderFramePaged .OrderFramePagedBody {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: calc(100% - 430px);
+}
+
+.OrderFramePaged .OrderFramePagedSide {
+    display: block;
+    float: right;
+    overflow: hidden;
+    width: 400px;
+    background: #fff;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideFrame {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideTitle {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    color: #222;
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideImage {
+    padding-bottom: 20px;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems {
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem {
+    display: block;
+    overflow: hidden;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem .OrderFramePagedSideItemKey {
+    width: 100px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem.Gray {
+    font-size: 12px;
+    color: #999;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem.Gray .OrderFramePagedSideItemKey {
+    text-align: right;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideBtn {
+    padding: 20px 0;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideBtn .OrderFramePagedSideBtnLink {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    color: #222;
+    line-height: 40px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    background: #d8ae69;
+    color: #fff;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideBtn .OrderFramePagedSideBtnLink:hover {
+    background: #d8ae69;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideHelp {
+    font-size: 13px;
+    color: #999;
+    line-height: 30px;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideContact {
+    padding: 15px 0;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideContact .OrderFramePagedSideContactItem {
+    font-size: 14px;
+    color: #222;
+    line-height: 25px;
+}
+
+.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideWork {
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #fff;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomFrame {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 36px 30px 36px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomTitle {
+    display: block;
+    overflow: hidden;
+    color: #222;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 0 0 0 340px;
+    min-height: 190px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomImage {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 190px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomSummary {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+    height: 126px; 
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomSummary,.OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideContact, .OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideWork {
+    letter-spacing: 0.005em;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomPrice {
+    display: block;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    line-height: 30px;
+    margin-top: 6px;
+    padding-top: 2px;
+    padding-bottom: 13px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomPrice .OrderRoomPriced {
+    float: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomPrice .OrderRoomPriced .Price {
+    font-weight: bold;
+    color: #e2660a;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomPrice .OrderRoomPricem {
+    float: right;
+    font-size: 12px;
+    color: #888;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle {
+    display: block;
+    overflow: hidden;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle .OrderRoomToggleBtn {
+    display: block;
+    overflow: hidden;
+    line-height: 38px;
+    height: 38px;
+    border: 1px solid #d2a469;
+    width: 130px;
+    padding-right: 18px;
+    text-align: center;
+    color: #d2a469;
+    background: url(/Public/home/images/order/arrow.png) right center no-repeat;
+    font-size: 14px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle .OrderRoomToggleBtn:hover {
+    background-color: #fef4e7;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle .OrderRoomToggleBtn.Active {
+    background: url(/Public/home/images/order/arraw.png) right center no-repeat;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList {
+    display: none;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister {
+    padding-top: 30px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 6px;
+    background: #eee;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemFrame {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 25px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail {
+    display: block;
+    overflow: hidden;
+    float: left;
+    width: 440px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail .OrderRoomItemTitle {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    color: #444;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail .OrderRoomItemTitle .Hint {
+    font-size: 12px;
+    color: #888;
+    font-weight: normal;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail .OrderRoomItemParams {
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail .OrderRoomItemParams .OrderRoomItemParam {
+    letter-spacing: 0.005em;
+    display: block;
+    overflow: hidden;
+    /*float: left;*/
+    font-size: 14px;
+    color: #222;
+    line-height: 25px;
+    height: 25px;
+    /*width:200px;*/
+    margin-right: 12px;
+    padding-left: 20px;
+    background: url(img/dot.png) left center no-repeat;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder {
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    float: right;
+    margin-right: 30px;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemPrice {
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+    text-align: right;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemPrice .Price {
+    font-weight: bold;
+    color: #e2660a;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemToggle {
+    padding: 25px 0;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemToggle .OrderRoomItemToggleBtn {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    color: #222;
+    line-height: 36px;
+    height: 36px;
+    width: 135px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    background: #d8ae69;
+    color: #fff;
+    float: right;
+}
+
+.OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemToggle .OrderRoomItemToggleBtn:hover {
+    background: #d8ae69;
+}
+
+
+.button__label.btn1 {
+    height: 30px;
+    margin-top: 11px;
+    padding-left: 77px;
+    left: 0;
+    background-size: 60px;
+    font-weight: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: #444;
+    font-size: 14px;
+}
+
+/*餐厅*/
+.section--full-window-height > .section__wrapper {
+    top: 60px;
+}
+
+
+/*视频控制*/
+.block__video {
+    background: #fffff2;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.block__video .imgbg {
+    position: absolute;
+    z-index: 1;
+    object-fit: fill;
+    object-position: inherit;
+}
+
+.en .article.article--page h1, .en .local-experience__title {
+    letter-spacing: 2px;
+}
+
+
+.max1024 {
+    max-width: 1024px;
+}
+
+.max1024 {
+    max-width: 1024px;
+}
+
+
+.en .roomlistorderWrap.max1024 {
+    max-width: 1192px;
+}
+
+.en select.sborder1[name=day], .en select.sborder1[name=nums] {
+}
+
+#foldoutMenu .foldout__link {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.article p, article p {
+    letter-spacing: 0.005em;
+}
+
+.layui-laydate .layui-this {
+    background-color: #c48b11 !important;
+    color: #fff !important;
+}
+
+.local-experiences__section {
+    display: flex;
+}
+
+.local-experiences__item {
+    float: none;
+}
+
+article  .roomtitleen {
+    margin-bottom: 0;
+}
+
+
+
+article .roomdescription p:last-child, .article .roomdescription p:last-child {
+    margin-top: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .local-experiences__section {
+        display: block;
+    }
+
+    .local-experiences__item {
+        float: left;
+    }
+
+
+
+
+
+
+
+    .header__image img {
+        height: 41px;
+    }
+
+    #header {
+        display: block;
+    }
+
+    .headerWidget10 {
+        display: none;
+    }
+
+    .hamburger__open {
+        color: #000;
+    }
+
+
+    .header:after {
+        display: none;
+    }
+
+    .sborder {
+        position: relative;
+    }
+
+
+
+    /*两个列*/
+    .lan2 {
+        max-height: inherit;
+    }
+    /*三个列*/
+    .local-experience__expiry {
+        max-height: 90px;
+    }
+
+    .header__logo .header__image img {
+        width: auto !important;
+    }
+
+    .sborder1 td {
+        width: 100% !important;
+    }
+
+    .sborder1 .book-button {
+        width: 100% !important;
+    }
+
+    .sborder1 .book-button__title {
+        top: 10px;
+    }
+
+
+    .sborder1 .title2 {
+        display: none;
+    }
+
+    .article.article--page2 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background: #fff;
+    }
+
+    article.article--page, .article.article--page {
+        padding-left: 2rem;
+        background: #fff !important;
+    }
+
+    .footer {
+        margin-top: 21px;
+    }
+
+    .sborder {
+        margin-top: 73px;
+    }
+
+
+    /*视频*/
+    .block__video {
+        object-position: -750px bottom;
+    }
+
+
+    .book-button {
+        margin-left: 0;
+    }
+
+
+
+    /*首页中的预订*/
+    .sborder table, .sborder tr, .sborder tbody, .sborder th, .sborder td {
+        padding-right: 0 !important;
+    }
+
+    .sborder1 input, .sborder1 select {
+        width: 100% !important;
+    }
+
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemDetail .OrderRoomItemParams .OrderRoomItemParam {
+        float: none;
+        padding-left: 0;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder {
+        margin-right: 0;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomList .OrderRoomLister .OrderRoomItem .OrderRoomItemOrder .OrderRoomItemToggle {
+        padding: 0;
+    }
+
+    .en .box input[type=text] {
+        width: 100%;
+    }
+
+    /*房间详情的控制*/
+    .footer__section--two .footer__list {
+        max-height: inherit;
+    }
+
+    .fxss .footer__section--two .footer__column {
+        padding: 0;
+        width: 50% !important;
+        float: left !important;
+        border: none;
+    }
+
+    .fxss .iconwrap1 {
+        height: 40px;
+        width: 41px;
+        line-height: 40px;
+        margin-right: 5px;
+    }
+
+    .fxss .iconwrap1 i {
+        font-size: 18px;
+    }
+
+    .fxss .footer__section--two .footer__list--container:last-child .footer__list-item:last-child {
+        padding-bottom: 1.3em;
+    }
+
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomImage,
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomToggle {
+        position: static;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel {
+        padding: 0;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomSummary {
+        margin-top: 10px;
+        height: auto;
+        letter-spacing:0;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomPanel .OrderRoomPrice {
+        padding-bottom: 0;
+    }
+
+    .OrderFramePaged .OrderFramePagedBody .OrderRoom .OrderRoomTitle {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .water .grid--third-window-height {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    .water .article--page {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        padding-bottom: 30px !important;
+    }
+}

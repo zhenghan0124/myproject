@@ -1,0 +1,43 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>展览名称</th>
+            <th>申请单位</th>
+            <th>申请人</th>
+            <th>联系电话</th>
+            <th>日期</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+              <td>{$data.title}</td>
+              <td>{$data.company}</td>
+              <td>{$data.contact}</td>
+              <td>{$data.tel}</td>
+              <td>{$data.time|date='Y-m-d',###}</td>
+              <td><a href="{:U('view_construct',array('id' => $data['id']))}">查看</a> <a href="{:U('del_construct',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a></td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

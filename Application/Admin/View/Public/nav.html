@@ -1,0 +1,390 @@
+
+<nav class="scroll nav-light">
+
+    <ul class="nav" ui-nav>
+      <li class="nav-header hidden-folded">
+        <small class="text-muted">首页</small>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Index">class="active"</eq>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">首页</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('Index/index')}">
+            <span class="nav-text">banner图片</span>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Index/about')}">
+            <span class="nav-text">酒店介绍</span>
+          </a>
+        </li>
+      </ul>
+      </li>
+
+      <!-- <li <eq name="Think.CONTROLLER_NAME" value="News">class="active"</eq>>
+      <a>
+          <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <span class="nav-icon">
+            <i class="material-icons">&#xe3fc;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_0.svg'"></span>
+            </i>
+          </span>
+        <span class="nav-text">酒店新闻</span>
+      </a>
+      <ul class="nav-sub">
+        <li>
+          <a href="{:U('News/index')}">
+            <span class="nav-text">酒店新闻</span>
+          </a>
+        </li>
+      </ul>
+      </li> -->
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Room">class="active"</eq>>
+        <a>
+            <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          <span class="nav-icon">
+              <i class="material-icons">&#xe8f0;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_2.svg'"></span>
+              </i>
+            </span>
+          <span class="nav-text">客房服务</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Room/banner')}">
+              <span class="nav-text">banner图</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Room/index')}">
+              <span class="nav-text">客房列表</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Room/order')}">
+              <span class="nav-text">在线预订</span>
+            </a>
+          </li>
+          <li>
+          <a href="{:U('Room/policy')}">
+            <span class="nav-text">预约政策</span>
+          </a>
+        </li>
+        </ul>
+      </li>
+      
+      <li <eq name="Think.CONTROLLER_NAME" value="About">class="active"</eq>>
+        <a>
+            <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          <span class="nav-icon">
+              <i class="material-icons">&#xe8f0;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_2.svg'"></span>
+              </i>
+            </span>
+          <span class="nav-text">关于我们</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('About/index')}">
+              <span class="nav-text">关于安麓</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('About/about')}">
+              <span class="nav-text">千岛湖安麓</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Picture">class="active"</eq>>
+        <a>
+            <span class="nav-caret">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          <span class="nav-icon">
+              <i class="material-icons">&#xe8f0;
+                <span ui-include="'__PUBLIC__/admin/assets/images/i_2.svg'"></span>
+              </i>
+            </span>
+          <span class="nav-text">安麓图集</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Picture/index')}">
+              <span class="nav-text">图集</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Dinner">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">餐饮</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Dinner/index')}">
+              <span class="nav-text">摘要</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Dinner/dinner')}">
+              <span class="nav-text">餐饮</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Water">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">水疗</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Water/index')}">
+              <span class="nav-text">摘要</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Water/water')}">
+              <span class="nav-text">水疗</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Activity">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">店内活动</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Activity/index')}">
+              <span class="nav-text">摘要</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Activity/activity')}">
+              <span class="nav-text">活动</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Product">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">目的地介绍</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Product/index')}">
+              <span class="nav-text">摘要</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="{:U('Activity/activity')}">
+              <span class="nav-text">活动</span>
+            </a>
+          </li> -->
+        </ul>
+      </li>
+      
+      <li <eq name="Think.CONTROLLER_NAME" value="Honor">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">荣誉</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Honor/index')}">
+              <span class="nav-text">荣誉</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="{:U('Activity/activity')}">
+              <span class="nav-text">活动</span>
+            </a>
+          </li> -->
+        </ul>
+      </li>
+
+      <!-- <li <eq name="Think.CONTROLLER_NAME" value="Meeting">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">宴会会议</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Meeting/index')}">
+              <span class="nav-text">宴会会议</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Meeting/order')}">
+              <span class="nav-text">宴会预定</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li <eq name="Think.CONTROLLER_NAME" value="Business">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">商务休闲</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Business/index')}">
+              <span class="nav-text">商务休闲</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Wedding">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">完美婚礼</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Wedding/index')}">
+              <span class="nav-text">完美婚礼</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Hr">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">社会招聘</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Hr/banner')}">
+              <span class="nav-text">banner图</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Hr/index')}">
+              <span class="nav-text">社会招聘</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li <eq name="Think.CONTROLLER_NAME" value="Contact">class="active"</eq>>
+        <a>
+              <span class="nav-caret">
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <span class="nav-icon">
+            <i class="material-icons">&#xe8d2;
+              <span ui-include="'__PUBLIC__/admin/assets/images/i_3.svg'"></span>
+            </i>
+          </span>
+          <span class="nav-text">联系我们</span>
+        </a>
+        <ul class="nav-sub">
+          <li>
+            <a href="{:U('Contact/banner')}">
+              <span class="nav-text">banner图</span>
+            </a>
+          </li>
+          <li>
+            <a href="{:U('Contact/index')}">
+              <span class="nav-text">联系我们</span>
+            </a>
+          </li>
+        </ul>
+      </li> -->
+
+</nav>
+</eq>

@@ -1,0 +1,416 @@
+
+<extend name="Base/common" />
+
+<block name="main">
+
+
+
+
+
+
+
+
+    </head>
+
+
+    <body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+        <!-- Foldout menu-->
+        <include file="Public/nav" />
+        <!-- END Header-->
+        <!-- Main Content-->
+
+
+
+
+
+        <main class="main activity" id="main">
+            <section class="section section--show" id="top">
+                <article class="block block--feature block--generic">
+                    <div class="block__wrapper">
+                        <div class="block__image" style="background-image: url('__PUBLIC__/home/img/banner/roomlist.jpg')"></div>
+
+                    </div>
+                </article>
+            </section>
+
+            <!-- 预订 -->
+            <style>
+                .sborder1 { position: relative; width: auto; float: none; margin: 0; padding: 0; padding: 10px 30px; }
+                .sborder select { padding: 10px; }
+                .sborder .title { font-size: 14px; margin-bottom: 6px; }
+
+                input.ca { background-image: url(/Public/home/img/ca.jpg); background-repeat: no-repeat; background-position: right; padding: 11px 10px; }
+
+                .sborder1 td { padding-left: 0; padding-right: 0; padding-bottom: 30px; }
+
+                .sborder1 input, .sborder select { width: 100%; text-align: left; font-size: 14px; }
+
+                .sborder1 .box { margin-bottom: 0; margin-right: 0; }
+
+                .sborder1 table { margin: auto; }
+
+                .sborder1 select { width: 86px; }
+
+                .sborder1 input { width: auto; }
+            </style>
+            <div class="sborder sborder1" style="float: none;position: static;margin: 0;padding: 10px 30px;">
+                <div class="sbmain max1024 roomlistorderWrap" style="overflow: hidden;">
+                    <form action="{:U('Order/roomlist')}" method="POST" id="test">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 0px;">
+                                        <div class="title">{$Think.lang.start}</div>
+                                        <div class="box">
+
+
+                                            <!-- <input type="text" class="ca" id="start" onchange="changedate()"  style="width: 140px;" name="start" value="<?php echo date("Y-m-d",strtotime("+1 day")) ?>" /> -->
+                                            <input type="text" class="ca" id="start" onchange="changedate()" style="width: 140px;" name="start" value="{$start}" />
+                                        </div>
+
+                                    </td>
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.end}</div>
+                                        <div class="box">
+
+                                            <input type="text" class="ca" id="end" name="end" style="width: 140px;" value="{$end}" />
+                                            <!-- <input type="text" class="ca" id="end" name="end"  style="width: 140px;"  value="<?php echo date("Y-m-d",strtotime("+2 day")) ?>" /> -->
+                                        </div>
+
+                                    </td>
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.adult}</div>
+                                        <div class="box">
+                                            <select name="adult">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.child}</div>
+                                        <div class="box">
+                                            <select name="child">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </td>
+
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.yudingday}</div>
+                                        <div class="box">
+                                            <select name="day">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </td>
+
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.kefang}</div>
+                                        <div class="box">
+                                            <select name="nums">
+                                                <option value="1">1</option>
+                                                <!-- <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option> -->
+                                            </select>
+                                        </div>
+                                    </td>
+
+                                    <td style="padding-right: 0;">
+                                        <div class="title">{$Think.lang.youhui}</div>
+                                        <div class="box">
+                                            <input type="text" class="ca" style="background-image:none;">
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="title title2">&nbsp;</div>
+                                        <div class="box">
+                                            <a class="book-button modal-trigger header__book" href="#" style="padding: 9px 0rem; width: auto; display: block;   padding: 13px; background: #323232;" onclick="check()">
+                                                <h4 class="book-button__title" onclick="check()">{$Think.lang.order}</h4>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <script>
+                function check() {
+                    var form = document.getElementById('test');
+                    //再次修改input内容
+
+                    form.submit();
+                }
+            </script>
+            <!-- /预订 -->
+
+
+
+            <div class="sbmain" style="margin-top: 70px;">
+                <div class="roomdetail">
+
+
+                    <div class="OrderFramePage">
+
+                        <div class="OrderFramePaged">
+                            <div class="OrderFramePagedBody">
+                                <volist name="list" id="vo">
+                                    <div class="OrderRoom">
+                                        <div class="OrderRoomFrame">
+                                            <div class="OrderRoomTitle">{$vo.title}</div>
+                                            <div class="OrderRoomPanel">
+                                                <div class="OrderRoomImage">
+                                                    <img class="OrderRoomImageImg" src="/Uploads/{$vo.pic}" style="width: 100%; height: 100%;">
+                                                </div>
+                                                <div class="OrderRoomSummary">
+                                                    {$vo.description}
+                                                </div>
+                                                <div class="OrderRoomPrice">
+                                                    <div class="C"></div>
+                                                </div>
+                                                <div class="OrderRoomToggle">
+                                                    <a href="javascript:;" onclick="Cspk(this);"><span class="button__label btn1">{$Think.lang.fangjia} <i class="iconfont icon-you"></i><i class="iconfont icon-down"></i></span></a>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="OrderRoomList">
+                                                <div class="OrderRoomLister">
+                                                    <volist name="vo.roomtype" id="price">
+                                                        <div class="OrderRoomItem">
+                                                            <!-- <div class="OrderRoomItem" > -->
+                                                            <div class="OrderRoomItemFrame">
+                                                                <div class="OrderRoomItemDetail">
+                                                                    <div class="OrderRoomItemTitle">{$price.title}</div>
+                                                                    <div class="OrderRoomItemParams">
+                                                                        <eq name="Think.cookie.think_language" value="en-us">
+                                                                            <div class="OrderRoomItemParam">Area：{$price.area}</div>
+                                                                            <div class="OrderRoomItemParam">Bed：{$price.bed}</div>
+                                                                            <div class="OrderRoomItemParam">Extra bed：{$price.add}</div>
+                                                                            <div class="OrderRoomItemParam">Floor：{$price.floor}</div>
+                                                                            <else />
+                                                                            <div class="OrderRoomItemParam">面积：{$price.area}</div>
+                                                                            <div class="OrderRoomItemParam">床型：{$price.bed}</div>
+                                                                            <div class="OrderRoomItemParam">加床：{$price.add}</div>
+                                                                            <div class="OrderRoomItemParam">楼层：{$price.floor}</div>
+                                                                        </eq>
+
+                                                                        <div class="C"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="OrderRoomItemOrder">
+                                                                    <eq name="Think.cookie.think_language" value="en-us">
+                                                                        <div class="OrderRoomItemPrice"><span class="Price">RMB{$price.sprice}</span> per night</div>
+                                                                        <else />
+                                                                        <div class="OrderRoomItemPrice">每晚 <span class="Price">￥{$price.sprice}</span>起</div>
+                                                                    </eq>
+
+                                                                    <div class="OrderRoomItemToggle">
+                                                                        <a class="OrderRoomItemToggleBtn" href="{:U('Order/pay',array('id' => $price['id']))}">{$Think.lang.liji}</a>
+                                                                        <div class="C"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="C"></div>
+                                                            </div>
+                                                        </div>
+                                                    </volist>
+
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </volist>
+
+                            </div>
+
+
+                            <style>
+                                .OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem .OrderFramePagedSideItemKey{
+                                width:79px;
+                                }
+
+                                .OrderFramePaged .OrderFramePagedSide .OrderFramePagedSideItems .OrderFramePagedSideItem .OrderFramePagedSideItemKey.en-us {
+                                    width: 100px;
+                                }
+                            </style>
+
+                            <div class="OrderFramePagedSide">
+                                <div class="OrderFramePagedSideFrame">
+
+                                    <div class="OrderFramePagedSideImage">
+                                        <img class="OrderFramePagedSideImageImg" src="__PUBLIC__/home/img/banner/1.jpg" style="width: 100%;">
+                                    </div>
+                                    <div class="OrderFramePagedSideItems">
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em;  display: inline-block;">{$Think.lang.start}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">{$start}</span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em; display: inline-block;">{$Think.lang.end}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">{$end}</span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em; display: inline-block;">{$Think.lang.wanshu}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">
+                                                {$day}<eq name="Think.cookie.think_language" value="en-us">
+
+                                                    <else />
+                                                    晚
+                                                </eq>
+                                            </span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em; display: inline-block;">{$Think.lang.nums}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">
+                                                {$nums}<eq name="Think.cookie.think_language" value="en-us">
+
+                                                    <else />
+                                                    间
+                                                </eq>
+                                            </span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em; display: inline-block;">{$Think.lang.adults}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">
+                                                {$adult}<eq name="Think.cookie.think_language" value="en-us">
+
+                                                    <else />
+                                                    人
+                                                </eq>
+                                            </span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideItem">
+                                            <span class="IB OrderFramePagedSideItemKey {$Think.cookie.think_language}" style="margin-right: 1em; display: inline-block;">{$Think.lang.childs}：</span>
+                                            <span class="IB OrderFramePagedSideItemVal">
+                                                {$child}<eq name="Think.cookie.think_language" value="en-us">
+
+                                                    <else />
+                                                    人
+                                                </eq>
+                                            </span>
+                                            <div class="C"></div>
+                                        </div>
+                                        <div class="OrderFramePagedSideBtn">
+                                            <a class="OrderFramePagedSideBtnLink" href="javascript:history.go(-1)">{$Think.lang.back}</a>
+                                        </div>
+
+                                        <div class="OrderFramePagedSideContact">
+                                            <div class="OrderFramePagedSideContactItem">○ {$Think.lang.tel}</div>
+                                            <div class="OrderFramePagedSideContactItem">○ {$Think.lang.email}</div>
+                                        </div>
+                                        <div class="OrderFramePagedSideWork">{$Think.lang.work}</div>
+                                        <div class="OrderFramePagedSideWork">{$Think.lang.day}</div>
+
+                                        <div class="BR" style="height: 30px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="C"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </main>
+
+
+        <script>
+            function Cspk(link) {
+                $(link).toggleClass("Active");
+                $(link).parents(".OrderRoom").find(".OrderRoomList").slideToggle("fast");
+            }
+        </script>
+
+        <script src="__PUBLIC__/home/js/laydate/laydate.js"></script>
+        <script>
+            function addDate(date, days) {
+                if (days == undefined || days == '') {
+                    days = 1;
+                }
+                var date = new Date(date);
+                date.setDate(date.getDate() + days);
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                return date.getFullYear() + '-' + getFormatDate(month) + '-' + getFormatDate(day);
+            }
+            function getFormatDate(arg) {
+                if (arg == undefined || arg == '') {
+                    return '';
+                }
+
+                var re = arg + '';
+                if (re.length < 2) {
+                    re = '0' + re;
+                }
+
+                return re;
+            }
+
+
+            laydate.render({
+                elem: '#start',
+                // min: '{$start}',
+                min: 0,
+                max: 89,
+                done: function (value, date, endDate) {
+                    var end = $('#end').val();
+                    if (value >= end) {
+                        $('#end').val(addDate(value, 1));
+                    }
+                },
+                lang: '<eq name="Think.cookie.think_language" value="en-us">en<else/>cn</eq>',
+            });
+            laydate.render({
+                elem: '#end',
+                // min: +1,
+                min:1,
+                max:90,
+                done: function (value, date, endDate) {
+                    var start = $('#start').val();
+                    if (value <= start) {
+                        $('#start').val(addDate(value, -1));
+                    }
+                },
+                lang: '<eq name="Think.cookie.think_language" value="en-us">en<else/>cn</eq>',
+            });
+        </script>
+
+
+
+
+        <block name="footer">
+        </block>

@@ -1,0 +1,192 @@
+<extend name="Base/common" />
+<block name="main">
+    <style>
+        /*大banner*/
+        .sborder { /*padding-right: 140px;*/ }
+    </style>
+    </head>
+    <body class="page page--sticky-book-mobile page--home " data-page-type="home">
+        <!-- Foldout menu-->
+        <include file="Public/nav" />
+        <!-- END Header-->
+        <!-- Main Content-->
+        <main class="main activity" id="main">
+            <div class="sborderwrap">
+                <div class="sborder">
+                    <form action="" method="POST" id="test">
+                        <style>
+                            .sborder td { vertical-align: top; padding-bottom: 0; }
+                        </style>
+                        <table>
+                            <tr>
+                                <td colspan="2" style="padding-bottom: 0;">
+                                    <div class="title" style="margin-bottom: 0;">
+                                        {:l('ydxx')}
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom:0;">
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.start}：</span>
+                                        <span class="text">{$startDate}</span>
+                                    </div>
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.end}：</span>
+                                        <span class="text">{$endDate}</span>
+                                    </div>    <div class="box">
+                                                  <span class="title1">{$Think.lang.yudingday}：</span>
+                                        <span class="text">{$day}{:l('ydday')}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.num}：</span>
+                                        <span class="text">{$people}<eq name="Think.cookie.think_language" value="en-us">
+                                                                        
+                                                                    <else/>
+                                                                        人
+                                                                    </eq></span>
+                                    </div>
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.kefang}：</span>
+                                        <span class="text">{$nums}<eq name="Think.cookie.think_language" value="en-us">
+                                                                        
+                                                                    <else/>
+                                                                        间
+                                                                    </eq></span>
+                                    </div>    <div class="box">
+                                                  <span class="title1">{$Think.lang.youhui}：</span>
+                                        <span class="text">{$code}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--
+                            
+                            
+                            -->
+                            <tr>
+                                <td style="padding-bottom:0;">
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.name}：</span>
+                                        <input type="text" name="name" id="name"/>
+                                    </div>
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.emails}：</span>
+                                        <input type="text" name="email" id="email" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="box">
+                                        <span class="title1">{$Think.lang.mobile}：</span>
+                                        <input type="text" name="mobile" id="mobile" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-bottom: 0;padding-top:0;">
+                                    <div class="title" style="margin-bottom: 0;color: #000;font-size: 15px;">{$Think.lang.liuyan}:</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-top:10px;">
+                                    <div class="box" style="margin-bottom: 0; margin-right: 10px;">
+                                        <textarea style="width: 100%;height:92px;" name="info" ></textarea>
+										
+										<a href="{:U('Order/policy')}" target="_blank" style=" font-size: 15px; color: #d8ae69; margin-top: 3px;">{$Think.lang.yuyue}
+    <i class="iconfont icon-you" style="  font-size: 8px;  position: relative; left: -6px; display: none;"></i>
+</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="text-align: center; background: #eee; padding: 14px 10px; font-size: 14px;margin-right:10px;">
+                                        {$Think.lang.jine}：<span style="color: #d8ae69;">CNY {$total_fee}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-bottom: 0;">
+                                    <div class="title" style="margin-bottom: 0;">{$Think.lang.paytype}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-bottom: 0; text-align: center;">
+                                    <style>
+                                        .payType { display: inline-block; font-size: 16px; }
+                                        .payType i { font-size: 36px; }
+                                        .payType .iconwrap { width: 78px; height: 78px; border-radius: 100%; display: inline-block; line-height: 78px; background: #eee; margin: 0 50px; color: #8e8e8e; margin-bottom: 10px; }
+                                        .payType.active .iconwrap { background: #d8ae69; color: #fff; }
+                                    </style>
+                                    <eq name="roomtype.paytype" value="0">
+                                        <span class="payType active" paytype="3">
+                                            <span class="iconwrap"><i class="iconfont icon-mendianguanli"></i></span>
+                                            <div>{$Think.lang.cash}</div>
+                                        </span>
+                                        <else />
+                                        <span class="payType active" paytype="22">
+                                            <span class="iconwrap"><i class="iconfont icon-shiliangzhinengduixiang1" style="font-size: 31px;"></i></span>
+                                            <div>{$Think.lang.alipay}</div>
+                                        </span>
+                                        <span class="payType" paytype="21">
+                                            <span class="iconwrap"><i class="iconfont icon-weixin1" style="font-size: 36px;"></i></span>
+                                            <div>{$Think.lang.wechat}</div>
+                                        </span>
+                                    </eq>
+                                    
+                                    
+                                    <script>
+                                        $(function () {
+                                            $('.payType').click(function () {
+                                                $('.payType').removeClass('active');
+                                                $(this).addClass('active');
+                                                $("#paytype").val($(this).attr("paytype"));
+                                            })
+                                        })
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <a href="javascript:history.go(-1);">
+                                        <span class="next btn21" style="margin-right: 50px; color: #8e8e8e">
+                                            <span>{$Think.lang.back}</span>
+                                        </span>
+                                    </a>
+                                    <input type="hidden" name="paytype" value="22" id="paytype">
+                                    <input type="hidden" name="id" value="{$roomtype.id}">
+                                    <input type="hidden" name="roomid" value="{$roomtype.roomid}">
+                                    <a href="javascript:;" onclick="check()">
+                                        <span class="next  btn22">
+                                            <span>{$Think.lang.tijiao}</span>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <script>
+                        function check() {
+                            var form = document.getElementById('test');
+                            if($("#name").val() == ''){
+                                layer.msg("{:l('require_name')}");
+                                return false;
+                            }
+                            if($("#email").val() == ''){
+                                layer.msg("{:l('require_email')}");
+                                return false;
+                            }
+                            if($("#mobile").val() == ''){
+                                layer.msg("{:l('require_phone')}");
+                                return false;
+                            }
+                            //再次修改input内容
+                            form.submit();
+                        }
+                    </script>
+                </div>
+            </div>
+        </main>
+        <block name="footer">
+        </block>

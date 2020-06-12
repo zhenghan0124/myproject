@@ -1,0 +1,43 @@
+[ 2019-10-08T22:01:31+08:00 ] 122.247.26.47 /index.php/Order/roomlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+NOTIC: [8] Undefined index: start D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 17 行.
+NOTIC: [8] Undefined index: end D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 18 行.
+NOTIC: [8] Undefined index: nums D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 19 行.
+NOTIC: [8] Undefined index: code D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 20 行.
+NOTIC: [8] Undefined index: adult D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 21 行.
+NOTIC: [8] Undefined index: child D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `qy_roomtype` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_roomtype` ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ims_hotel2_room_huodong` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `qy_price` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_price` WHERE ( roomid='12' AND start_date<='2019-09-18' AND end_date>='2019-09-18' AND start_date<='2019-09-19' AND end_date>='2019-09-19' ) ORDER BY id desc  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ims_hotel2_room_huodong` WHERE ( hotel_code='UAHZJ' AND room_code='D1BV' AND ratecode='WHL01' AND start_time<='2019-09-18' AND end_time>='2019-09-18' ) ORDER BY id ASC  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 93 行.
+SQL: SELECT * FROM `qy_price` WHERE ( roomid='11' AND start_date<='2019-09-18' AND end_date>='2019-09-18' AND start_date<='2019-09-19' AND end_date>='2019-09-19' ) ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ims_hotel2_room_huodong` WHERE ( hotel_code='UAHZJ' AND room_code='L2BV' AND ratecode='WHL01' AND start_time<='2019-09-18' AND end_time>='2019-09-18' ) ORDER BY id ASC  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 93 行.
+SQL: SELECT * FROM `qy_price` WHERE ( roomid='10' AND start_date<='2019-09-18' AND end_date>='2019-09-18' AND start_date<='2019-09-19' AND end_date>='2019-09-19' ) ORDER BY id desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ims_hotel2_room_huodong` WHERE ( hotel_code='UAHZJ' AND room_code='C2BV' AND ratecode='WHL01' AND start_time<='2019-09-18' AND end_time>='2019-09-18' ) ORDER BY id ASC  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Home\Controller\OrderController.class.php 第 93 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Runtime\Cache\Home\0f4b92c2a455c394098414489306e71b.php 第 547 行.
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Runtime\Cache\Home\0f4b92c2a455c394098414489306e71b.php 第 547 行.
+NOTIC: [8] Undefined index: sprice D:\www\ahnluh.com\Application\Runtime\Cache\Home\0f4b92c2a455c394098414489306e71b.php 第 547 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+

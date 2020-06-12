@@ -1,0 +1,252 @@
+[ 2019-11-11T13:45:54+08:00 ] 124.74.69.26 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_logo' ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_about' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'dinner_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Water_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Activity_index' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Product_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'honor_index' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: aa D:\www\ahnluh.com\Application\Home\Controller\IndexController.class.php 第 61 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024415s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2019-11-11T13:46:28+08:00 ] 124.74.69.26 /index.php/Anlu/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'about_about' ) LIMIT 1   [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2019-11-11T13:47:28+08:00 ] 101.89.239.120 /index.php/Anlu/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'about_about' ) LIMIT 1   [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2019-11-11T14:28:20+08:00 ] 124.74.69.26 /index.php/About/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'about_index' ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2019-11-11T14:28:28+08:00 ] 124.74.69.26 /index.php/Contact/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-11-11T14:28:28+08:00 ] 124.74.69.26 /index.php/Contact/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-11-11T14:28:34+08:00 ] 124.74.69.26 /index.php/Anlu/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'about_about' ) LIMIT 1   [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2019-11-11T14:29:22+08:00 ] 61.151.207.186 /index.php/About/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'about_index' ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-11-11T15:16:59+08:00 ] 183.136.190.62 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_logo' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_about' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'dinner_index' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Water_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Activity_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Product_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'honor_index' ) LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: aa D:\www\ahnluh.com\Application\Home\Controller\IndexController.class.php 第 61 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2019-11-11T18:06:11+08:00 ] 101.132.194.119 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `qy_block` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_logo' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'index_about' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'dinner_index' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Water_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Activity_index' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'Product_index' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `qy_block` WHERE ( title = 'honor_index' ) LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: aa D:\www\ahnluh.com\Application\Home\Controller\IndexController.class.php 第 61 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: think_language D:\www\ahnluh.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 8 行.
+NOTIC: [8] Undefined index: think_language D:\www\ahnluh.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 14 行.
+NOTIC: [8] Undefined index: think_language D:\www\ahnluh.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 160 行.
+NOTIC: [8] Undefined index: think_language D:\www\ahnluh.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 846 行.
+NOTIC: [8] Undefined index: think_language D:\www\ahnluh.com\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 859 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

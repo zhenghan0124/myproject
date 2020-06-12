@@ -1,0 +1,396 @@
+﻿<extend name="Base/common" />
+
+<block name="main">
+
+
+
+    <link href="__PUBLIC__/home/css/swiper.min.css" rel="stylesheet" />
+    <script src="__PUBLIC__/home/js/swiper.min.js"></script>
+    <style>
+        .swiper-container { width: 100%; height: 100%; margin-left: auto; margin-right: auto; }
+
+        .swiper-slide { text-align: center; font-size: 18px; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+
+        .header { position: relative; height: 133px; }
+        #footer { margin-top: 30px; }
+
+
+        .swiper-container { /*min-height: calc(100vh - 290px);*/ min-height: calc(100vh - 200px); }
+
+
+        /*餐厅内容居左*/
+        .offers__top > .block__content { text-align: left; }
+
+
+        /* .block__title { font-family: "songti SC",SimSun, STSong, Times,"Times New Roman",serif; } */
+
+        .block__body:not(:empty) { font-size: 14px; }
+
+        .block__content-footer_sbwrap { position: absolute; bottom: 10px; }
+
+        .block__content-footer_sbwrap .block__content-footer { margin-top: 0; }
+
+        .block__content-footer_sbwrap .block__content-footer .icon__item { display: block; }
+
+        .offers__wrapper { background: none; }
+
+        .section__wrapper--max-width.offers__wrapper { background: #fff; }
+
+
+
+        .offers__top > .block__content { padding-top: 40px; }
+
+
+
+
+        /*餐具*/
+        .block__readmore .icon__label { margin-top: 0; margin-left: 0; font-weight: normal; text-transform: capitalize; }
+    </style>
+
+
+
+</head>
+
+
+<body class="page page--sticky-book-mobile page--home " data-page-type="home">
+
+
+
+
+
+    <!-- Foldout menu-->
+    <include file="Public/nav" />
+    <!-- END Header-->
+    <!-- Main Content-->
+
+
+
+
+
+    <main class="main" id="main" style="/*height: calc(100vh - 100px); height:100vh;margin-top:100px;*/position:relative;z-index:99;">
+
+
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <volist name="data" id="vo">
+                    <div class="swiper-slide">
+                        <section style="width: 100%;" class="section _section--snap section--full-window-height section--full-window-height--large usesVH section--auto-height section--offers hidden-on-discover section--show" id="offers">
+                            <div class="section__wrapper section__wrapper--offers">
+                                <div class="offers__wrapper">
+                                    <div class="section__wrapper--max-width offers__wrapper">
+                                        <div class="section section--third-window-height usesVH section--offers section--show" id="bestOffers-top">
+                                            <div class="section__wrapper">
+                                                <div class="offers__top">
+
+
+                                                    <div class="block__content">
+                                                        <div class="block__name name name-bold">
+                                                        </div>
+                                                        <div class="block__content-container">
+
+                                                            <h2 class="block__title block__title--large title">{$vo.title} </h2>
+                                                            <div class="block__body block__body--thin text">
+                                                                {$vo.description}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="block__content-footer">
+                                                            <ul class="icon__list">
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+                                                                        <span class="iconwrap">
+                                                                            <i class="iconfont icon-canju"></i>
+                                                                        </span><span class="icon__label">{$vo.title_one}</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="icon__list">
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+                                                                        <span class="iconwrap">
+                                                                            <i class="iconfont icon-time"></i>
+                                                                        </span><span class="icon__label">{$vo.title_two} </span>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul>
+                                                            <!-- <ul class="icon__list">
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+                                                                        <span class="iconwrap">
+
+                                                                        </span><span class="icon__label goldcolor" style="font-weight: normal;">{$Think.lang.jike}</span>
+                                                                    </a>
+                                                                </li>
+
+                                                            </ul> -->
+                                                        </div>
+
+                                                        <div class="block__content-footer_sbwrap">
+                                                            <div class="block__content-footer">
+                                                                <ul class="icon__list" style="margin-bottom:30px;">
+                                                                    <li class="icon__item block__readmore">
+                                                                        <a class="icon__link" href="javascript:;">
+
+                                                                            <span class="icon__label">{$vo.title}</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon__item block__readmore">
+                                                                        <a class="icon__link" href="javascript:;">
+
+                                                                            <span class="icon__label goldcolor">{$vo.title_three}</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon__item block__readmore">
+                                                                        <a class="icon__link" href="javascript:;">
+
+                                                                            <span class="icon__label goldcolor">{$vo.title_four}</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="block__offer">
+                                                        <div class="block__wrapper">
+                                                            <div class="block__image" style="background-image: url('/Uploads/{$vo.pic}');"></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </volist>
+                <!-- <div class="swiper-slide">
+                    <section style="width: 100%;" class="section _section--snap section--full-window-height section--full-window-height--large usesVH section--auto-height section--offers hidden-on-discover section--show" id="offers">
+                        <div class="section__wrapper section__wrapper--offers">
+                            <div class="offers__wrapper">
+                                <div class="section__wrapper--max-width offers__wrapper">
+                                    <div class="section section--third-window-height usesVH section--offers section--show" id="bestOffers-top">
+                                        <div class="section__wrapper">
+                                            <div class="offers__top">
+
+
+                                                <div class="block__content">
+                                                    <div class="block__name name name-bold">
+                                                    </div>
+                                                    <div class="block__content-container">
+
+                                                        <h2 class="block__title block__title--large title">书香阁 </h2>
+                                                        <div class="block__body block__body--thin text">
+                                                            千岛湖（新安江水库），位于浙江省杭州市淳安县境内，小部分连接建德市西北，是为建新安江水电站拦蓄新安江下游而成的人工湖，1955年始建，1960年建成。水库坝高105米，长462米；水库长约150千米，最宽处达10余千米；最深处达100余米，平均水深30.44米，在正常水位情况下，面积约580平方千米，蓄水量可达178亿立方米，在最高水位时拥有1078座大于0.25平方千米的陆桥岛屿，并以2平方千米以下的小岛为主，岛屿面积共409平方千米。
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="block__content-footer">
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+                                                                        <i class="iconfont icon-canju"></i>
+                                                                    </span><span class="icon__label">亚洲及国际风味美食</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+                                                                        <i class="iconfont icon-time"></i>
+                                                                    </span><span class="icon__label">早间 7：00 至晚间 </span>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+
+                                                                    </span><span class="icon__label goldcolor" style="font-weight: normal;">即刻预订</span>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="block__content-footer_sbwrap">
+                                                        <div class="block__content-footer">
+                                                            <ul class="icon__list" style="margin-bottom:30px;">
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label">书香阁</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label goldcolor">全日餐厅</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label goldcolor">望湖美食廊</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="block__offer">
+                                                    <div class="block__wrapper">
+                                                        <div class="block__image" style="background-image: url('__PUBLIC__/home/img/photo/9.jpg');"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+   
+
+                <div class="swiper-slide">
+                    <section style="width: 100%;" class="section _section--snap section--full-window-height section--full-window-height--large usesVH section--auto-height section--offers hidden-on-discover section--show" id="offers">
+                        <div class="section__wrapper section__wrapper--offers">
+                            <div class="offers__wrapper">
+                                <div class="section__wrapper--max-width offers__wrapper">
+                                    <div class="section section--third-window-height usesVH section--offers section--show" id="bestOffers-top">
+                                        <div class="section__wrapper">
+                                            <div class="offers__top">
+
+
+                                                <div class="block__content">
+                                                    <div class="block__name name name-bold">
+                                                    </div>
+                                                    <div class="block__content-container">
+
+                                                        <h2 class="block__title block__title--large title">书香阁 </h2>
+                                                        <div class="block__body block__body--thin text">
+                                                            千岛湖（新安江水库），位于浙江省杭州市淳安县境内，小部分连接建德市西北，是为建新安江水电站拦蓄新安江下游而成的人工湖，1955年始建，1960年建成。水库坝高105米，长462米；水库长约150千米，最宽处达10余千米；最深处达100余米，平均水深30.44米，在正常水位情况下，面积约580平方千米，蓄水量可达178亿立方米，在最高水位时拥有1078座大于0.25平方千米的陆桥岛屿，并以2平方千米以下的小岛为主，岛屿面积共409平方千米。
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="block__content-footer">
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+                                                                        <i class="iconfont icon-canju"></i>
+                                                                    </span><span class="icon__label">亚洲及国际风味美食</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+                                                                        <i class="iconfont icon-time"></i>
+                                                                    </span><span class="icon__label">早间 7：00 至晚间 </span>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                        <ul class="icon__list">
+                                                            <li class="icon__item block__readmore">
+                                                                <a class="icon__link" href="javascript:;">
+                                                                    <span class="iconwrap">
+
+                                                                    </span><span class="icon__label goldcolor" style="font-weight: normal;">即刻预订</span>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="block__content-footer_sbwrap">
+                                                        <div class="block__content-footer">
+                                                            <ul class="icon__list" style="margin-bottom:30px;">
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label">书香阁</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label goldcolor">全日餐厅</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon__item block__readmore">
+                                                                    <a class="icon__link" href="javascript:;">
+
+                                                                        <span class="icon__label goldcolor">望湖美食廊</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="block__offer">
+                                                    <div class="block__wrapper">
+                                                        <div class="block__image" style="background-image: url('__PUBLIC__/home/img/photo/9.jpg');"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div> -->
+
+            </div>
+
+            <div class="swiper-button-next  swiper-button-black"></div>
+            <div class="swiper-button-prev  swiper-button-black"></div>
+        </div>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                keyboard: {
+                    enabled: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+
+    </main>
+
+
+<block name="footer">
+</block>

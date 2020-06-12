@@ -1,0 +1,75 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+	<style>
+	.status { padding:5px ;border:1px solid #ccc;background:#ddd;}
+	.status-success{ background:#6cc788;border:1px solid #5cb85c;color:#fff;}
+	</style>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <table class="table table-striped b-t">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>核销状态</th>
+            <th>订单号/支付交易号</th>            
+            <th>门票名称</th>
+            <th>数量</th>
+            <th>总价</th>          
+            <th>游玩日期</th>
+            <th>支付状态</th>
+            <th>预订时间</th>
+            <th>备注</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <volist name="data" id="data">
+            <tr>
+              <td>{$data.id}</td>
+			  <td>
+				  <eq name="data.status" value="1">
+					<span class="status status-success">已核销</span>					
+				  </eq>
+			  </td>
+              <td><a href="{:U('orderdetail',array('id' => $data['id']))}">{$data.ordersn}</br>{$data.trade_no}</a></td>             
+              <td>{$data.title}</td>
+              <td>{$data.nums}</td>
+              <td>{$data.total_price}</td>            
+              <td>{$data.occdate}</td>
+              <td>
+				<eq name="data.pay_status" value="1">
+					<span class="status status-success">已支付</span>
+					<else/>
+					<span class="status">未支付</span>
+				</eq>
+				<eq name="data.pay_type" value="alipay">
+					支付宝
+				</eq>
+				<eq name="data.pay_type" value="wechatpay">
+					微信支付
+				</eq>
+			  </td>
+			  <td>{$data.createtime|date='Y-m-d H:i:s',###}</td>			 
+			  <td>{$data.remark}</td>			 
+              <td>
+				<a href="{:U('orderdetail',array('id' => $data['id']))}">详情</a> 
+				<!--<a href="{:U('delete',array('id'=>$data['id']))}" class="text-danger" onclick="return confirm('确认要删除吗，删除后无法恢复？')">删除</a>-->
+			  </td>
+            </tr>
+          </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagenavi">
+        {$pagenavi}
+      </div>
+    </div>
+  </div>
+</block>

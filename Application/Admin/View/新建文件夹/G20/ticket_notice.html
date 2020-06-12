@@ -1,0 +1,36 @@
+<extend name="Base/common"/>
+
+<block name="title">
+  {$page.title}
+</block>
+
+<block name="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-divider m-0"></div>
+        <div class="box-body">
+          <form role="form" class="validate" action="__ACTION__" method="post">
+            <div class="form-group">
+              <label>内容</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea name="content" class="form-control" cols="30" rows="10">{$data.content}</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>内容</label>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea name="content_en" class="form-control" cols="30" rows="10">{$data.content_en}</textarea>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn primary m-b">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
